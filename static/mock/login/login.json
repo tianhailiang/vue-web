@@ -1,0 +1,27 @@
+{
+  "code": 0,
+  "message": "用户登录成功。",
+  "timestamp": 1494230652192,
+  "data": {
+    "user": {
+      "id": 82,
+      "username": "zhangjie@163.com",
+      "name": "zhangjie黑寡",
+      "groups": "teacher",
+      "nickName": "zhangjie22",
+      "sex": 1,
+      "email": "zhangjie@163.com",
+      "emailChecked": null,
+      "mobile": "1",
+      "mobileChecked": null,
+      "photoFileId": 281,
+      "nric": "340827199404290336",
+      "password": "b2383fed89a4376c6e5ec9adf29caa0f",
+      "userToken": "f102895c-2a9a-4fa9-8c5c-21b94aae5fa3",
+      "photoUrl": "/asset/pic/2017032110584612082.png",
+      "seed": "yctSp1qtpEFVN6uPb4BDKQ==",
+      "mode": "ooo",
+      "roles": null
+    }
+  }
+}
