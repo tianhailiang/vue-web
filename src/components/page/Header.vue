@@ -224,19 +224,21 @@ nav{
     z-index: 300;
     background-color: #fff;
     width: 150px;
-    height: 150px;
     border-radius: 5px;
     box-shadow: 2px 2px 5px #333;
 }
 
 .true_list li{
-    position: relative;
-    padding-left: 58px;
+   
+    
     padding-top: 2px;
     padding-bottom: 2px;
     color: rgba(0, 0, 0, 0.4);
-    line-height: 30px;
+   
     cursor: pointer;
+    display:flex;
+    align-items: center;
+
 }
 
 .true_list li:nth-of-type(1){
@@ -248,6 +250,40 @@ nav{
   line-height: 35px;
     border-top: solid 1px #B6B6B6;
 }
+
+.true_list li i{
+      color: #585858;
+}
+
+
+.ico_img{
+    display: block;   
+    width: 16px;
+    height: 16px;
+    margin-left:25px;
+    margin-right:17px;
+}
+
+.ico_home {
+    background: url(http://localhost:8888/src/assets/header/room.png);
+    background-size: cover;
+}
+
+.ico_class_m {
+    background: url(http://localhost:8888/src/assets/header/class-manage.png);
+    background-size: cover;
+}
+
+.ico_setup {
+    background: url(http://localhost:8888/src/assets/header/setup.png);
+    background-size: cover;
+}
+
+.ico_go_away {
+    background: url(http://localhost:8888/src/assets/header/go-away.png);
+    background-size: cover;
+}
+
 
 </style>
 
@@ -305,17 +341,21 @@ nav{
                                         <div class="little_arrow"></div>
                                         <div class="shadow_arrow"></div>
                                         <ul class="true_list">
-                                            <li>
-                                               <a href="./pages/myTimetable/myTimetable.html"><span class="ico-img ico-home"></span> 我的主页</a>
+                                            <router-link to="/myTimetable" tag="li">
+                                                 <span class="ico_img ico_home"></span> 
+                                                 <i>我的主页</i>
+                                           </router-link>
+                                              <li>
+                                                <span class="ico_img ico_class_m"></span>
+                                                 <i>课程管理</i>
                                               </li>
                                               <li>
-                                                 <a href="./pages/myCourseVideo/myCourseVideo.html"><span class="ico-img ico-class-m"></span>课程管理</a>
+                                                <span class="ico_img ico_setup"></span> 
+                                                <i>个人设置</i>
                                               </li>
                                               <li>
-                                                 <a href="./pages/studentPersonalInfo/studentPersonalInfo.html"><span class="ico-img ico-setup"></span> 个人设置</a>
-                                              </li>
-                                              <li>
-                                                 <a href="javascript:;"><span class="ico-img ico-go-away"></span> 退出登录</a>
+                                                <span class="ico_img ico_go_away"></span>
+                                                <i> 退出登录</i>
                                               </li>
                                         </ul>
                                  </div>

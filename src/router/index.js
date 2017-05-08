@@ -5,6 +5,7 @@ import Index from '../components/page/Index'
 
 import Index_login from '../components/page/Index_login'
 import UserManagement from '../components/page/system_management/User_management'
+import MTt from '../components/page/myTimetable/MyTimetable'
 
 Vue.use(Router)
 
@@ -33,6 +34,12 @@ export default new Router({
 
         
       ]
+    },
+     {
+      path: '/myTimetable',
+      name: 'MTt',
+      component: MTt
     }
+
   ]
 })
