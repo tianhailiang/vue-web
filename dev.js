@@ -13,6 +13,9 @@ module.exports = function (env) {
   return  webpackMerge(commonConfig(),{
 
   	        devtool: "cheap-eval-source-map",
+            entry:{
+               webpack_hot:'webpack/hot/only-dev-server'    
+            },
 
   	        devServer: {
   	        	  hot: true,

@@ -3,14 +3,12 @@
   .login{
          width: 420px;
          height: 420px;
-    position: relative;
-    margin: 100px auto;
+       position: relative;
+       margin: 100px auto;
   }
 
  
-
-
-  .user_login_content {
+.user_login_content {
    
     width: 570px;
 }
@@ -97,6 +95,9 @@
 
 
 <template>
+<div>
+  
+  <Top></Top>
   
  <div class="login">
   
@@ -134,13 +135,15 @@
 
  </div>
 
+</div> 
+
 </template>
 
 <script>
 
 import axios from 'axios'
 
-
+import Top from '../Header'
  //设置cookie
 
 function setCookie(name,value,leftCircle){
@@ -284,6 +287,9 @@ export default {
     }
   },
 
+  components: {
+    Top
+  },
   methods: {
     user: function (message) {
       if(message==""){
@@ -367,10 +373,10 @@ export default {
 
              // 临时存储数据
               
-           console.log(result)
+            console.log(result)
             sessionStorage.obj =JSON.stringify(result.data);
 
-             that.$router.push({ path: 'Index_login' });
+             that.$router.push({ path: '/' });
 
           }else{
 

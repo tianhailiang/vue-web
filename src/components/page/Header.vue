@@ -2,7 +2,6 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .header{
-    height: 70px;
    
     padding: 15px 30px;
     display: flex;
@@ -311,19 +310,25 @@ nav{
                 <a href="javascript:;" class="b"></a>
             </div>
             <ul class="nav_ul">
-                <li><a class="active" href="./index.html">首页</a></li>
+                 <li>
+                     <router-link to="/" active-class="active" exact>首页</router-link>
+                 </li>    
                 <li><a class="nav-classroom" href="./classroom.html">直播课堂</a></li>
                 <li><a href="./pages/teacherList/teacherList.html">名师国际</a></li>
                 <li><a href="./pages/courseList/courseList.html">一对一家教</a></li>
                 <li><a class="nav-quxue" href="./quxue.html">趣学英语</a></li>
+                <li>
+                     <router-link to="/smallSchool" active-class="active" exact>微校</router-link>
+                </li>
+                
                 <li><a class="nav-about" href="./about.html">关于优看</a></li>
             </ul>
 
         </nav>
 
-        <div class="header_right" >
+        <div class="header_right" v-if="isLogin==0">
 
-              <div class="lgo_user" v-if="str!=''">
+              <div class="lgo_user" v-if="role!=''">
                 
                   <div class="header_photo" >
                      <img src="http://localhost:8888/src/assets/header/body-header.png" />
@@ -374,11 +379,11 @@ nav{
                  
                      <div>
                        
-                         <a>免费注册</a>
+                         <router-link to="/register" >免费注册</router-link>
                      </div>
 
                       <div>
-                           <router-link to="/Login" >用户登陆</router-link>
+                           <router-link to="/login"  events="login">用户登陆</router-link>
                       </div>  
 
                  
@@ -397,31 +402,40 @@ export default {
   data () {
     return {
       
-      str:""
+      role:"",
+      isLogin:"0"
     }
   },
 
    created:function(){
 
        if(sessionStorage.obj){
-            var userStr = JSON.parse(sessionStorage.obj);
+            var userRole = JSON.parse(sessionStorage.obj);
        }
       
        if(!sessionStorage.obj){
 
-            this.$set(this,'str','');
+            this.$set(this,'role','');
            
 
-       }else if(userStr.user.groups == "teacher"){
+       }else if(userRole.user.groups == "teacher"){
            // 0 是老师 1是学生
-           this.$set(this,'str','0');
+           this.$set(this,'role','0');
            
-       }else if(userStr.user.groups == "student"){
+       }else if(userRole.user.groups == "student"){
               
-               this.$set(this,'str','1');
+               this.$set(this,'role','1');
                
        }
          
+   },
+
+   methods:{
+      
+      login:function(){
+         console.log(1000)
+      }
+
    }
 }
 

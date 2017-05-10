@@ -1,4 +1,3 @@
-
 <style scoped> 
 
    
@@ -11,31 +10,25 @@
 
     <Top></Top>
 
-    <Banner></Banner>
-
   </div>
 
 </template>
 
 <script>
 
-import Top from './Header'
-
-import Banner from './Banner'
+import Top from '../Header'
 
 
 export default {
-  name: 'Index',
+  name: 'SmallSchool',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
   },
   components: {
-    Top, Banner
+    Top
   }
 }
 
 </script>
-
-

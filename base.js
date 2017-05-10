@@ -24,7 +24,6 @@ module.exports = function(env) {
 
         entry: {
            
-            webpack_hot:'webpack/hot/only-dev-server',
             main: './main.js',
             vendor: 'moment'
           
@@ -71,18 +70,7 @@ module.exports = function(env) {
                     exclude: /(node_modules)/,
                     use: [{
                       loader: 'babel-loader',
-                      options: {
-                        presets: [['es2015', {modules: false}],"react"],
-                        plugins:[
-                              'syntax-dynamic-import',
-                              'transform-async-to-generator',
-                              'transform-regenerator',
-                              'transform-runtime'
-                              
-                                // Enables React code to work with HMR.
-                            ]
-                      }
-
+                     
                     }]
                 },
 

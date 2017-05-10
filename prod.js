@@ -14,7 +14,7 @@ module.exports = function(env) {
 
     	 output: {
             filename: '[name].[chunkhash].js',
-            path: path.resolve(__dirname, 'dist_prod')
+            path: path.resolve(__dirname, 'dist')
         },
 
        
