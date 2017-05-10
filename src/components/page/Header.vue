@@ -4,21 +4,23 @@
   .header{
    
     padding: 15px 30px;
-    display: flex;
-   
-    flex-wrap:wrap;
-    justify-content:space-between;
+   position:relative;
+   overflow: hidden;
 
   }
 
+.logo{
+ float:left;
 
+}
 
 nav{
 
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-right: 175px;
+  margin-right: 15px;
+ float:right;
 
 }
 
@@ -96,9 +98,7 @@ nav{
 
 
 .header_right{
-  position: absolute;
-  right:30px;
-  top:15px;
+ float:right;
 }
 
 .log_right div:nth-of-type(1){
@@ -292,7 +292,7 @@ nav{
   
   <header class="header">
      
-     <div >
+     <div class="logo">
 
           <img src="http://localhost:8888/src/assets/header/logo.png" >
 
@@ -300,33 +300,7 @@ nav{
 
     
 
-         <nav>
-            <div class="search">
-                <select class="select">
-                    <option value="0">搜教师</option>
-                    <option value="1">搜课程</option>
-                </select>
-                <input type="text" style="font-family:'Microsoft YaHei'" name="" id="" >
-                <a href="javascript:;" class="b"></a>
-            </div>
-            <ul class="nav_ul">
-                 <li>
-                     <router-link to="/" active-class="active" exact>首页</router-link>
-                 </li>    
-                <li><a class="nav-classroom" href="./classroom.html">直播课堂</a></li>
-                <li><a href="./pages/teacherList/teacherList.html">名师国际</a></li>
-                <li><a href="./pages/courseList/courseList.html">一对一家教</a></li>
-                <li><a class="nav-quxue" href="./quxue.html">趣学英语</a></li>
-                <li>
-                     <router-link to="/smallSchool" active-class="active" exact>微校</router-link>
-                </li>
-                
-                <li><a class="nav-about" href="./about.html">关于优看</a></li>
-            </ul>
-
-        </nav>
-
-        <div class="header_right" v-if="isLogin==0">
+    <div class="header_right" v-if="isLogin==0">
 
               <div class="lgo_user" v-if="role!=''">
                 
@@ -383,7 +357,7 @@ nav{
                      </div>
 
                       <div>
-                           <router-link to="/login"  events="login">用户登陆</router-link>
+                           <router-link to="/login"  >用户登陆</router-link>
                       </div>  
 
                  
@@ -392,6 +366,32 @@ nav{
 
       </div>
 
+       <nav>
+            <div class="search">
+                <select class="select">
+                    <option value="0">搜教师</option>
+                    <option value="1">搜课程</option>
+                </select>
+                <input type="text" style="font-family:'Microsoft YaHei'" name="" id="" >
+                <a href="javascript:;" class="b"></a>
+            </div>
+            <ul class="nav_ul">
+                 <li>
+                     <router-link to="/" active-class="active" exact>首页</router-link>
+                 </li>    
+                <li><a class="nav-classroom" href="./classroom.html">直播课堂</a></li>
+                <li><a href="./pages/teacherList/teacherList.html">名师国际</a></li>
+                <li><a href="./pages/courseList/courseList.html">一对一家教</a></li>
+                <li><a class="nav-quxue" href="./quxue.html">趣学英语</a></li>
+                <li>
+                     <router-link to="/smallSchool" active-class="active" exact>微校</router-link>
+                </li>
+                
+                <li><a class="nav-about" href="./about.html">关于优看</a></li>
+            </ul>
+
+        </nav>
+
   </header>
 </template>
 
@@ -399,16 +399,23 @@ nav{
 
 export default {
   name: 'top',
+   props:{  
+       isLogin:{
+        type:Number,
+        default: 0
+      }
+    },
   data () {
     return {
       
-      role:"",
-      isLogin:"0"
+      role:""
+     
     }
   },
 
    created:function(){
 
+   
        if(sessionStorage.obj){
             var userRole = JSON.parse(sessionStorage.obj);
        }
@@ -430,13 +437,12 @@ export default {
          
    },
 
-   methods:{
+    methods:{
       
-      login:function(){
-         console.log(1000)
-      }
+    
 
    }
+
 }
 
 </script>

@@ -97,7 +97,7 @@
 <template>
 <div>
   
-  <Top></Top>
+  <Top :isLogin="1"></Top>
   
  <div class="login">
   
@@ -286,6 +286,17 @@ export default {
 
     }
   },
+  beforeRouteEnter (to, from, next) {
+    // 在渲染该组件的对应路由被 confirm 前调用
+    // 不！能！获取组件实例 `this`
+    // 因为当钩子执行前，组件实例还没被创建
+
+        next(vm => {
+        // 通过 `vm` 访问组件实例
+          console.log(vm)
+
+      })
+  },
 
   components: {
     Top
@@ -392,6 +403,8 @@ export default {
 
     }
   }
+
+
 }
 </script>
 
