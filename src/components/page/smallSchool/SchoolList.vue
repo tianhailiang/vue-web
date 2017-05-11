@@ -4,12 +4,12 @@
 
 
 .school_head{
-  width:1330px;
+  width:100%;
   border-bottom:1px solid #dcdcdc;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 45px;
+ 
   
 }
 
@@ -61,12 +61,12 @@
 
 .school_ul li{
   width:300px;
-  margin-left:45px;
+  margin-right:45px;
 }
 
-/*.school_ul li:nth-of-type(4n+0){
+.school_ul li:nth-of-type(4n+0){
 	margin-right:0;
-}*/
+}
 
 .school_ul li img{
   width:100%;
@@ -101,7 +101,7 @@
 
 	                    
 	                      <span @click="previousPage">
-	                         <svg class="icon arrow_font active" aria-hidden="true">
+	                         <svg class="icon arrow_font" aria-hidden="true" >
 	                              <use xlink:href="#icon-jiantou1"></use>
 	                         </svg>
 	                      </span>
@@ -134,7 +134,7 @@
 
 	export default {
 	  name: 'SchoolList',
-	  props:['rows','type'],
+	  props:['rows','type','isActive'],
 	  data () {
 	    return {
 	      
@@ -143,8 +143,7 @@
 	  methods:{
 	  	previousPage:function(){
 	  		
-
-           this.$emit('previousPage')
+           this.$emit('previousPage');
 	  	}
 
 	  }

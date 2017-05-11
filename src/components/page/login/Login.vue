@@ -401,8 +401,8 @@ export default {
          
          params: {
 
-          "username":that.userName,
-          "password":that.password
+          "username":this.userName,
+          "password":this.password
 
          }
 

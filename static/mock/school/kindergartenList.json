@@ -1,0 +1,22 @@
+
+{
+  "code": 0,
+  "message": "用户登录成功。",
+  
+  "data":{
+   
+   "kindergartenList":[
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p1.jpg","name":"幼儿园名称0","id":"0"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p2.jpg","name":"幼儿园名称1","id":"1"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p3.jpg","name":"幼儿园名称2","id":"2"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p4.jpg","name":"幼儿园名称3","id":"3"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p1.jpg","name":"幼儿园名称4","id":"4"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p2.jpg","name":"幼儿园名称5","id":"5"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p3.jpg","name":"幼儿园名称6","id":"6"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p4.jpg","name":"幼儿园名称7","id":"7"}
+
+   ]
+
+  } 
+  
+}

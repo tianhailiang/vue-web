@@ -5,8 +5,8 @@
   height:1000px;
  
   margin:0 auto;
-  padding-left:10px;
-
+  padding-left:55px;
+  padding-right:55px;
   box-sizing: border-box;
 
 }
@@ -24,9 +24,9 @@
 
     <div class="school_box">
         
-       <SchoolList :rows="kindergartenList" type="幼儿园" v-on:previousPage="pageBack"></SchoolList>
+       <SchoolList :rows="kindergartenList" type="幼儿园" v-on:previousPage="pageBack" ></SchoolList>
 
-       <SchoolList :rows="primarySchool" type="小学"></SchoolList>
+       <SchoolList :rows="primarySchool" type="小学" ></SchoolList>
 
     </div>
 
@@ -48,7 +48,9 @@ export default {
     return {
       kindergartenList:[],
       primarySchool:[],
-      pageSize:1
+      kindPage:1,
+      primaryPage:1
+     
     }
   },
   components: {
@@ -56,11 +58,11 @@ export default {
   },
   methods:{
 
-     request:function(){
+     requestKind:function(url){
 
-          axios.get("http://localhost:8888/static/mock/school/schoolList.json",{
+          axios.get(url,{
              params:{
-               pageSize:this.pageSize
+               pageSize:this.kindPage
              }
            })
           .then(function (response) {
@@ -71,6 +73,34 @@ export default {
               if(result.code==0){
 
                 this.$set(this,'kindergartenList',result.data.kindergartenList);
+               
+              }else{
+
+                console.log(result.msg)
+              } 
+              
+              
+
+          }.bind(this))
+          .catch(function (error) {
+              console.log(error);
+          });
+     },
+
+     requestPrimary:function(url){
+
+          axios.get(url,{
+             params:{
+               pageSize:this.primaryPage
+             }
+           })
+          .then(function (response) {
+
+             
+              var result=response.data;
+              
+              if(result.code==0){
+
                 this.$set(this,'primarySchool',result.data.primarySchool);
 
               }else{
@@ -88,12 +118,16 @@ export default {
 
       pageBack:function(){
 
-          this.$set(this,'pageSize',this.pageSize-1);
-          if(this.pageSize<1){
-            this.$set(this,'pageSize',1);
+          this.$set(this,'kindPage',this.kindPage-1);
+          if(this.kindPage<1){
+            this.$set(this,'kindPage',1);
+           
+          }else{
+
+            this.requestKind("http://localhost:8888/static/mock/school/kindergartenList.json");
           }
 
-          this.request();
+          
       }
 
 
@@ -101,8 +135,8 @@ export default {
   mounted:function(){
 
      
-      this.request();
-      
+      this.requestKind("http://localhost:8888/static/mock/school/kindergartenList.json");
+      this.requestPrimary('http://localhost:8888/static/mock/school/primarySchool.json');
 
 
   }
