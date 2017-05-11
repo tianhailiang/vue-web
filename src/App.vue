@@ -50,8 +50,7 @@ i{
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
-body{font-family: "PINGFANG REGULAR","Segoe UI", "Lucida Grande", Helvetica, Arial,
-"Microsoft YaHei", FreeSans, Arimo, "Droid Sans",
+body{font-family: "Microsoft YaHei","Segoe UI", "Lucida Grande", Helvetica, Arial, FreeSans, Arimo, "Droid Sans",
 "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3",
 FontAwesome, sans-serif;color:#030000; overflow-x:hidden;
   font-size: 14px;
@@ -61,11 +60,19 @@ FontAwesome, sans-serif;color:#030000; overflow-x:hidden;
 html, body {
     width: 100%;
     height: 100%;
-  
+  overflow-x: scroll;
+}
+
+
+.icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+ 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   

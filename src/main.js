@@ -5,7 +5,8 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 
-require('element-ui/lib/theme-default/index.css')
+require('element-ui/lib/theme-default/index.css');
+
 
 Vue.use(ElementUI)
 

@@ -3,7 +3,7 @@
 <style scoped>
   .header{
    
-    padding: 15px 30px;
+   padding: 15px 30px;
    position:relative;
    overflow: hidden;
 

@@ -1,6 +1,18 @@
 <style scoped> 
+.school_box{
+  width:100%;
+  max-width:1440px;
+  height:1000px;
+ 
+  margin:0 auto;
+  padding-left:10px;
 
-   
+  box-sizing: border-box;
+
+}
+
+
+
 </style>
 
 
@@ -10,24 +22,89 @@
 
     <Top></Top>
 
+    <div class="school_box">
+        
+       <SchoolList :rows="kindergartenList" type="幼儿园" v-on:previousPage="pageBack"></SchoolList>
+
+       <SchoolList :rows="primarySchool" type="小学"></SchoolList>
+
+    </div>
+
   </div>
 
 </template>
 
 <script>
 
-import Top from '../Header'
+import Top from '../Header';
 
+import SchoolList from './SchoolList';
+
+import axios from 'axios';
 
 export default {
   name: 'SmallSchool',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      kindergartenList:[],
+      primarySchool:[],
+      pageSize:1
     }
   },
   components: {
-    Top
+    Top,SchoolList
+  },
+  methods:{
+
+     request:function(){
+
+          axios.get("http://localhost:8888/static/mock/school/schoolList.json",{
+             params:{
+               pageSize:this.pageSize
+             }
+           })
+          .then(function (response) {
+
+             
+              var result=response.data;
+              
+              if(result.code==0){
+
+                this.$set(this,'kindergartenList',result.data.kindergartenList);
+                this.$set(this,'primarySchool',result.data.primarySchool);
+
+              }else{
+
+                console.log(result.msg)
+              } 
+              
+              
+
+          }.bind(this))
+          .catch(function (error) {
+              console.log(error);
+          });
+     },
+
+      pageBack:function(){
+
+          this.$set(this,'pageSize',this.pageSize-1);
+          if(this.pageSize<1){
+            this.$set(this,'pageSize',1);
+          }
+
+          this.request();
+      }
+
+
+  },
+  mounted:function(){
+
+     
+      this.request();
+      
+
+
   }
 }
 

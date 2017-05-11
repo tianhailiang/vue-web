@@ -108,10 +108,10 @@
       
       <div id="user_login_content" class="user_login_content">
         <label>邮箱</label>
-        <input type="text" class="usermessage"  placeholder="请输入邮箱" v-on:blur="user($event.target.value)" ref="email" v-model="userName"><span class="prompt" >{{userTitle}}</span>
+        <input type="text" class="usermessage"  placeholder="请输入邮箱"  ref="email" v-model="userName" v-focus v-blurs="user"><span class="prompt" >{{userTitle}}</span>
         
         <label>密码</label>
-        <input type="password" class="usermessage pwd"  placeholder="请输入密码" v-on:blur="pwd($event.target.value)" v-model="password" ref="pwd"><span class="prompt">{{pwdTitle}}</span>
+        <input type="password" class="usermessage pwd"  placeholder="请输入密码"  v-model="password" ref="pwd" v-blurs="pwd"><span class="prompt">{{pwdTitle}}</span>
 
         <div id="auto_login_content" class="auto_login_content">
         
@@ -293,47 +293,90 @@ export default {
 
         next(vm => {
         // 通过 `vm` 访问组件实例
-          console.log(vm)
+          // console.log(vm)
 
       })
+  },
+
+  directives: {
+    focus: {
+      inserted:function(el,{value}){
+
+          el.focus(); //自动获取焦点
+
+         
+      }
+
+    },
+
+    blurs:{
+
+       inserted:function(el,binding){
+       
+           if(typeof binding.value == 'function'){
+              el.onblur=binding.value(el);
+              
+           }
+
+      }
+        
+    }
+
+
   },
 
   components: {
     Top
   },
   methods: {
-    user: function (message) {
-      if(message==""){
-        this.$refs.email.focus();
-        this.$set(this,'userTitle', "用户名不能为空");
-      }else{
-         //先验证邮箱
 
-         var reg = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    user: function () {
 
-         if(reg.test(message)){
-             
-            this.$set(this,'userTitle', "");
-         }else{
-          //获取元素焦点
-          
-          this.$refs.email.focus();
-          
-          this.$set(this,'userTitle', "邮箱地址不合法！");
-         }
+     return (el)=>{
+     
 
+            if(this.userName==""){
+            
+               this.$set(this,'userTitle', "用户名不能为空");
+
+            }else{
+               //先验证邮箱
+
+               var reg = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+               if(reg.test(this.userName)){
+                   
+                  this.$set(this,'userTitle', "");
+
+               }else{
+                //获取元素焦点 通过自定义的指令返回 为了防止 this.$refs.email.focus(); 还没挂载上 报错
+
+                   el.target.focus();
+
+                  this.$set(this,'userTitle', "邮箱地址不合法！");
+               }
+
+            }
+            
       }
+
+      
     },
 
-    pwd:function(pwd){
+    pwd:function(){
 
-       if(pwd==""){
-             this.$refs.pwd.focus();
-            this.$set(this,'pwdTitle', "密码不能为空");
-       }else{
+       return (el)=>{
 
-           this.$set(this,'pwdTitle', "");
-       }
+           if(this.password==""){
+               el.target.focus();
+              this.$set(this,'pwdTitle', "密码不能为空");
+
+           }else{
+
+               this.$set(this,'pwdTitle', "");
+           }
+
+       }    
 
     },
 
@@ -341,7 +384,7 @@ export default {
      
        if(this.userName==""){
           this.$refs.email.focus();
-            this.$set(this,'userTitle', "用户名不能为空");
+          this.$set(this,'userTitle', "用户名不能为空");
            return;
        }
 
@@ -351,7 +394,7 @@ export default {
             return;      
        }
      
-       var that = this;
+      
        // 后台接口 不允许跨源 跨域http://ucan.bin-go.cc/api/login
        //http://localhost:8080/static/mock/login/login.json
        axios.get("http://localhost:8888/static/mock/login/login.json",{
@@ -371,10 +414,10 @@ export default {
           
           if(result.code==0){
 
-             if(that.checked){
+             if(this.checked){
                   
-                   setCookie("VY_T",that.userName, 7);
-                   setCookie("KU_FT", code(that.password),7);
+                   setCookie("VY_T",this.userName, 7);
+                   setCookie("KU_FT", code(this.password),7);
 
              }else{
 
@@ -387,7 +430,7 @@ export default {
             console.log(result)
             sessionStorage.obj =JSON.stringify(result.data);
 
-             that.$router.push({ path: '/' });
+             this.$router.push({ path: '/' });
 
           }else{
 
@@ -396,14 +439,21 @@ export default {
           
           
 
-      })
+      }.bind(this))
       .catch(function (error) {
           console.log(error);
       });
 
     }
-  }
+  },
 
+  mounted:function(){
+
+
+
+
+
+  }
 
 }
 </script>

@@ -77,6 +77,9 @@
 </style>
 <template>
 
+ <div>
+    <Top :isLogin="1"></Top>
+
   <div class="register_content">
   	
   	 <form >
@@ -110,13 +113,15 @@
 
   </div>
 
+ </div> 
+
 </template>
 
 <script>
 
 
 import axios from 'axios'
-
+import Top from '../Header'
 
 export default {
   name: 'Register',
@@ -131,8 +136,11 @@ export default {
       rpwdTitle:"",
     }
   },
+   components: {
+    Top
+  },
 
-    methods: {
+  methods: {
 		    user: function (message) {
 		      if(message==""){
 		      	this.$refs.email.focus();
