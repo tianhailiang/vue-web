@@ -1,0 +1,61 @@
+
+{
+  "code": 0,
+  "message": "用户登录成功。",
+  
+  "data":{
+   
+   "kindergartenList":[
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p1.jpg","name":"幼儿园名称0","id":"0"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p2.jpg","name":"幼儿园名称1","id":"1"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p3.jpg","name":"幼儿园名称2","id":"2"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p4.jpg","name":"幼儿园名称3","id":"3"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p1.jpg","name":"幼儿园名称4","id":"4"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p2.jpg","name":"幼儿园名称5","id":"5"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p3.jpg","name":"幼儿园名称6","id":"6"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p4.jpg","name":"幼儿园名称7","id":"7"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p1.jpg","name":"幼儿园thg0","id":"0"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p2.jpg","name":"幼儿园thg1","id":"1"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p3.jpg","name":"幼儿园thg2","id":"2"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p4.jpg","name":"幼儿园thg3","id":"3"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p1.jpg","name":"幼儿园thg4","id":"4"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p2.jpg","name":"幼儿园thg5","id":"5"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p3.jpg","name":"幼儿园thg6","id":"6"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p4.jpg","name":"幼儿园thg7","id":"7"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p1.jpg","name":"幼儿园haidao0","id":"0"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p2.jpg","name":"幼儿园haidao1","id":"1"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p3.jpg","name":"幼儿园haidao2","id":"2"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p4.jpg","name":"幼儿园haidao3","id":"3"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p1.jpg","name":"幼儿园haidao4","id":"4"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p2.jpg","name":"幼儿园haidao5","id":"5"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p3.jpg","name":"幼儿园haidao6","id":"6"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p4.jpg","name":"幼儿园haidao7","id":"7"}
+
+
+   ],
+    "primarySchool":[
+        
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p1.jpg","name":"小学名称0","id":"0"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p2.jpg","name":"小学名称1","id":"1"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p3.jpg","name":"小学名称2","id":"2"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p4.jpg","name":"小学名称3","id":"3"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p1.jpg","name":"小学名称4","id":"4"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p2.jpg","name":"小学名称5","id":"5"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p3.jpg","name":"小学名称6","id":"6"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p4.jpg","name":"小学名称7","id":"7"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p1.jpg","name":"小学thg0","id":"0"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p2.jpg","name":"小学thg1","id":"1"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p3.jpg","name":"小学thg2","id":"2"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p4.jpg","name":"小学thg3","id":"3"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p1.jpg","name":"小学thg4","id":"4"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p2.jpg","name":"小学thg5","id":"5"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p3.jpg","name":"小学thg6","id":"6"},
+       {"schoolUrl":"http://localhost:8888/src/assets/banner/p4.jpg","name":"小学thg7","id":"7"}
+
+
+
+   ]
+
+  } 
+  
+}

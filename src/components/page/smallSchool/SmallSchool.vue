@@ -24,9 +24,9 @@
 
     <div class="school_box">
         
-       <SchoolList :rows="kindergartenList" type="幼儿园" v-on:previousPage="pageBack" ></SchoolList>
+       <SchoolList :rows="kindRows" type="幼儿园" v-on:flip="kindChangePage" :maxPage="kmaxPage" ></SchoolList>
 
-       <SchoolList :rows="primarySchool" type="小学" ></SchoolList>
+       <SchoolList :rows="primaryRows" type="小学" v-on:flip="primaryChangePage" :maxPage="pmaxPage"></SchoolList>
 
     </div>
 
@@ -42,14 +42,19 @@ import SchoolList from './SchoolList';
 
 import axios from 'axios';
 
+
 export default {
   name: 'SmallSchool',
   data () {
     return {
       kindergartenList:[],
+      kindRows:[],
       primarySchool:[],
-      kindPage:1,
-      primaryPage:1
+      primaryRows:[],
+      size:8,
+      kmaxPage:0,
+      pmaxPage:0
+     
      
     }
   },
@@ -58,88 +63,59 @@ export default {
   },
   methods:{
 
-     requestKind:function(url){
+     
+     kindChangePage:function(currentPage){
 
-          axios.get(url,{
-             params:{
-               pageSize:this.kindPage
-             }
-           })
-          .then(function (response) {
 
-             
-              var result=response.data;
-              
-              if(result.code==0){
-
-                this.$set(this,'kindergartenList',result.data.kindergartenList);
-               
-              }else{
-
-                console.log(result.msg)
-              } 
-              
-              
-
-          }.bind(this))
-          .catch(function (error) {
-              console.log(error);
-          });
-     },
-
-     requestPrimary:function(url){
-
-          axios.get(url,{
-             params:{
-               pageSize:this.primaryPage
-             }
-           })
-          .then(function (response) {
-
-             
-              var result=response.data;
-              
-              if(result.code==0){
-
-                this.$set(this,'primarySchool',result.data.primarySchool);
-
-              }else{
-
-                console.log(result.msg)
-              } 
-              
-              
-
-          }.bind(this))
-          .catch(function (error) {
-              console.log(error);
-          });
-     },
-
-      pageBack:function(){
-
-          this.$set(this,'kindPage',this.kindPage-1);
-          if(this.kindPage<1){
-            this.$set(this,'kindPage',1);
-           
-          }else{
-
-            this.requestKind("http://localhost:8888/static/mock/school/kindergartenList.json");
-          }
-
+        this.$set(this,"kindRows",this.kindergartenList.slice(currentPage*this.size,(currentPage+1)*this.size)); 
           
-      }
+    },
+    
+    primaryChangePage:function(currentPage){
+
+        
+      this.$set(this,"primaryRows",this.primarySchool.slice(currentPage*this.size,(currentPage+1)*this.size)); 
+    }  
+
 
 
   },
   mounted:function(){
 
      
-      this.requestKind("http://localhost:8888/static/mock/school/kindergartenList.json");
-      this.requestPrimary('http://localhost:8888/static/mock/school/primarySchool.json');
+         axios.get("http://localhost:8888/static/mock/school/schoolList.json",{
+               
+             })
+            .then(function (response) {
 
+               
+                var result=response.data;
+                
+                if(result.code==0){
+
+                  this.$set(this,'kindergartenList',result.data.kindergartenList);
+                  this.$set(this,"kindRows",this.kindergartenList.slice(0,this.size));
+                  this.$set(this,"kmaxPage",Math.ceil(this.kindergartenList.length/this.size));
+
+                  this.$set(this,'primarySchool',result.data.primarySchool);
+                  this.$set(this,'primaryRows',this.primarySchool.slice(0,this.size));
+                  this.$set(this,"pmaxPage",Math.ceil(this.primarySchool.length/this.size));
+                  
+                }else{
+
+                  console.log(result.msg)
+                } 
+                
+                
+
+            }.bind(this))
+            .catch(function (error) {
+                console.log(error);
+            });
 
   }
 }
+
+
 
 </script>
