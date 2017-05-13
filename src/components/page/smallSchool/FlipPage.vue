@@ -1,27 +1,5 @@
+
 <style scoped>
-
-
-
-
-.school_head{
-  width:100%;
-  border-bottom:1px solid #dcdcdc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
- 
-  
-}
-
-
-.school_type{
-  line-height:53px;
-  font-size:24px;
-  color:#a0a0a0;
-  border-bottom: 1px solid #02b8ea;
-  text-align:center;
-
-}
 
 .arrow{
   display: flex;
@@ -51,92 +29,41 @@
   color:#333;
 }
 
-.school_ul{
-  width:1440px;
-  padding-top: 55px;
-  display: flex;
-  flex-wrap:wrap;
 
-}
 
-.school_ul li{
-  width:300px;
-  margin-right:45px;
-}
-
-.school_ul li:nth-of-type(4n+0){
-	margin-right:0;
-}
-
-.school_ul li img{
-  width:100%;
-  height:208px;
-
-}
-
-.school_ul li figcaption{
-  width:100%;
-  height:83px;
-  text-align:center;
-  color:#683905;
-  padding-top: 18px;
-  box-sizing: border-box;
-}
-
-	
 </style>
 
-
 <template>
-	 <div  >
+	
+       
 
-	               <div class="school_head">
-
-	                  <div class="school_type">{{type}}</div>
-
-	                  <div class="arrow" >
+      <div class="arrow" >
 
 
-	                    
-	                      <span @click="previousPage">
-	                         <svg class="icon arrow_font" aria-hidden="true" :class="{active:preActive}">
-	                              <use xlink:href="#icon-jiantou1"></use>
-	                         </svg>
-	                      </span>
-	                      <span @click="nextPage" >
-	                          <svg class="icon arrow_font" aria-hidden="true" :class="{active:nextActive}">
-	                              <use xlink:href="#icon-jiantou"></use>
-	                         </svg>
-	                      </span>
+        
+          <span @click="previousPage">
+             <svg class="icon arrow_font" aria-hidden="true" :class="{active:preActive}">
+                  <use xlink:href="#icon-jiantou1"></use>
+             </svg>
+          </span>
+          <span @click="nextPage" >
+              <svg class="icon arrow_font" aria-hidden="true" :class="{active:nextActive}">
+                  <use xlink:href="#icon-jiantou"></use>
+             </svg>
+          </span>
 
-	                  </div>
+      </div>
 
-	               </div>
-
-             
-               <ul class="school_ul">
-                 
-                
-                   <router-link   tag="li" v-for="(item,index) in rows" :key="index" :to="{name:'schoolDetail',params: { id: 123 }}">
-                       <figure>
-                          <img :src="item.schoolUrl" />
-                           
-                           <figcaption>{{item.name}}</figcaption> 
-                       </figure>
-
-                   </router-link>  
-                  
-               </ul>
-
-        </div> 
+	              
 </template>
+
 
 <script>
 
 
 export default {
-    name: 'SchoolList',
-    props:['rows','type','maxPage'],
+    name: 'FilpPage',
+    props:['maxPage'],
     data () {
       return {
 
@@ -153,6 +80,8 @@ export default {
 
     watch:{
       maxPage:function(newValue){
+
+      	// console.log(newValue)
        
         if(newValue>1){
           
@@ -249,15 +178,13 @@ export default {
 
     mounted:function(){
 
-       
-       
-    },
+    	
+    }
+
+   
     
 }
 
-
-
-	
 
 
 </script>

@@ -56,7 +56,7 @@ import axios from 'axios';
 import { swiper, swiperSlide } from 'vue-awesome-swiper'; 
 
 export default {
-  name: 'data',
+  name: 'Banner',
   data () {
     return {
      
