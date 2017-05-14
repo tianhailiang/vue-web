@@ -199,12 +199,12 @@ export default {
          //http://localhost:8888/static/mock/school/schoolList.json 
 
          // 调试的 http://192.168.1.81:8080/ucan_manage/schools/returnSchoolsAll
-         axios.get("http://localhost:8888/static/mock/school/schoolList.json ",{
+         axios.get("http://192.168.1.81:8080/ucan_manage/schools/returnSchoolsAll",{
                
              })
             .then(function (response) {
 
-               
+                  console.log(response)
                 var result=response.data;
 
                  // console.log(typeof result)

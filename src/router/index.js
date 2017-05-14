@@ -9,6 +9,7 @@ import MTt from '../components/page/myTimetable/MyTimetable'
 
 import SmallSchool from '../components/page/smallSchool/SmallSchool' // 微校模块
 import SchoolDetail from '../components/page/smallSchool/SchoolDetail' //学校详情页模块
+import NewsInformation from '../components/page/smallSchool/NewsInformation' //学校新闻详情页
 
 Vue.use(Router)
 
@@ -46,6 +47,11 @@ export default new Router({
     { path: '/schoolDetail/:id',
       name:'schoolDetail',
       component: SchoolDetail 
+    },
+    { path: '/newsInformation/:id',
+      name:'newsInformation',
+      component:NewsInformation
+     
     }
 
 

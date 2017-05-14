@@ -174,11 +174,6 @@ export default {
          
       }
 
-    },
-
-    mounted:function(){
-
-    	
     }
 
    

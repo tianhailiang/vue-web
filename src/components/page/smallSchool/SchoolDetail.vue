@@ -123,6 +123,51 @@
   line-height: 75px;
 }
 
+.nav_div{
+
+   display: flex;
+ 
+    border-bottom:1px solid #dcdcdc;
+	height:87px;
+	padding-top: 30px;
+	box-sizing: border-box;
+	
+}
+
+
+.title_span{
+
+   height:100%;
+   font-size: 25px;
+   color:#a0a0a0;
+   line-height: 57px;
+ 
+  margin-right: 27px;
+}
+
+.new_ul{
+	
+}
+
+.new_ul li{
+   height:35px;
+   line-height: 35px;
+   font-size: 14px;
+   color:#000;
+   border-bottom:1px dashed #dcdcdc;
+}
+
+
+.news_span{
+	display: inline-block;
+	width:217px;
+}
+
+.title_active{
+	color:#6e3a08;
+	border-bottom:1px solid #6e3a08;
+}
+
 </style>
 
 <template>
@@ -251,14 +296,63 @@
             </div>
 
 
+             <div class="brief_introduction" >
+                
+                <div class="nav_div" >
 
+                       <span class="title_span" @click="toggleTabs(0)" :class="{title_active:shows[0]}">校园动态</span>
+                       <span class="title_span" @click="toggleTabs(1)" :class="{title_active:shows[1]}">公告通知</span>
+                       <span class="title_span" @click="toggleTabs(2)" :class="{title_active:shows[2]}">教育资讯</span>
+                       
+                </div>
 
+	                 <ul class="new_ul" v-show="shows[0]">
+
+	                          <router-link   tag="li" v-for="(item,index) in campusDynamics" :key="index" :to="{name:'newsInformation',params: { id: item.id},query:{headImg:schoolImg,name:schoolName,type:0}}" >
+
+	                            
+	                                 <span class="news_span">{{item.news}}</span>
+	                                 <span class="date_span">{{item.date}}</span>
+
+	                           </router-link>
+	                           
+	                 </ul>
+
+	                  <ul class="new_ul" v-show="shows[1]">
+
+	                             <router-link   tag="li" v-for="(item,index) in notice" :key="index" :to="{name:'newsInformation',params: { id: item.id},query:{headImg:schoolImg,name:schoolName,type:1}}" >
+
+	                                 <span class="news_span">{{item.news}}</span>
+	                                 <span class="date_span">{{item.date}}</span>
+
+	                             </router-link>
+	                           
+	                 </ul>
+
+	                
+	                  <ul class="new_ul" v-show="shows[2]">
+                                  
+                                  <router-link   tag="li" v-for="(item,index) in educationalInformation" :key="index" :to="{name:'newsInformation',params: { id: item.id},query:{headImg:schoolImg,name:schoolName,type:2}}" >
+                                 
+	                             
+	                                 <span class="news_span">{{item.news}}</span>
+	                                 <span class="date_span">{{item.date}}</span>
+	                                 
+                                 </router-link>
+	                           
+	                           
+	                 </ul>
+
+	                 
+
+	                
+             </div>
 
      	</div>
 
      </div>     
 
-    </div>
+   </div>
 </template>
 
 <script>
@@ -289,7 +383,13 @@ export default {
       coursMaxPage:0,
       babyRecipesList:[],
       babyRows:[],
-      babyMaxPage:0
+      babyMaxPage:0,
+      campusDynamics:[],
+      notice:[],
+      educationalInformation:[],
+      shows:[true,false,false]
+     
+
     }
   },
   components: {
@@ -316,13 +416,31 @@ export default {
 
         
       this.$set(this,"babyRows",this.babyRecipesList.slice(currentPage*this.size,(currentPage+1)*this.size)); 
-    }    
+    },
+
+     toggleTabs: function(idx) {
+            
+          this.shows.forEach(function(value,index,array){
+               
+                 array[index]=false;  
+
+           });
+
+          
+          
+           this.shows.splice(idx, 1, true);
+
+           
+
+     }
+
+    
 
   },
 
   mounted:function(){
 
-  	console.log(this.$route.params)
+  	// console.log(this.$route.params)
 
   	axios.get("http://localhost:8888/static/mock/school/schoolDetail.json",{
 
@@ -361,6 +479,14 @@ export default {
                   this.$set(this,'babyRecipesList',result.data.BabyRecipes);
                   this.$set(this,"babyRows",this.courseList.slice(0,this.size));
                   this.$set(this,"babyMaxPage",Math.ceil(this.courseList.length/this.size));
+                   //校园动态
+
+                  this.$set(this,"campusDynamics",result.data.CampusDynamics); 
+                   //校园公告
+                  this.$set(this,"notice",result.data.Notice);
+                  //教育资讯
+
+                  this.$set(this,"educationalInformation",result.data.educationalInformation);
 
                   
                 }else{

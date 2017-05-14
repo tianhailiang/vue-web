@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" href="./img/ucan.ico">
+    <title>首页 - 优看 ucan</title>
+
+
+
+        <link rel="stylesheet" type="text/css" href="/static/html/header2/header.css" />
+    <link rel="stylesheet" href="/static/css/base.css" />
+    <link rel="stylesheet" href="/static/css/page.css" />
+    <style scoped> 
+
+
+.school_box{
+  width:100%;
+  max-width:1440px;
+  height:1000px;
+ 
+  margin:0 auto;
+  padding-left:55px;
+  padding-right:55px;
+  box-sizing: border-box;
+ 
+
+}
+
+</style>
+</head>
+
+<body>
+<!--[if lt IE 9]>
+ <style>
+    #IEdiv{width: 400px;height: 120px;text-align: left;border: 1px solid #999;padding: 15px}
+</style>
+ <![endif]-->
+    <!--顶部-->
+    <header class="cf">
+    <a class="logo" href="./index.html"><img src="/static/html/header/img/logo.png"/></a>
+
+    <nav>
+        <div class="search">
+            <select>
+                <option value="0">搜教师</option>
+                <option value="1">搜课程</option>
+            </select>
+            <input type="text" style="font-family:'Microsoft YaHei'" name="" id="">
+            <a href="javascript:;" class="b"></a>
+        </div>
+        <ul id="main-nav">
+            <li><a class="nav-index" href="./index.html">首页</a></li>
+            <li><a class="nav-classroom" href="./classroom.html">直播课堂</a></li>
+            <li><a href="./pages/teacherList/teacherList.html">名师国际</a></li>
+			<li><a href="./pages/courseList/courseList.html">一对一家教</a></li>
+            <li><a href="./smallSchool.html" class="small_school">微校</a></li>
+            <li><a class="nav-quxue" href="./quxue.html">趣学英语</a></li>
+<!--            <li><a href="#">智力游戏</a></li>-->
+            <li><a class="nav-about" href="./about.html">关于优看</a></li>
+<!--            <li><a href="#">下载APP</a></li>-->
+        </ul>
+    </nav>
+</header>
+
+      
+
+ <div class="school_box" id="school_box">
+        
+     
+
+        <!--   <div >
+
+                 <div class="school_head">
+
+                    <div class="school_type" >幼儿园</div>
+                    
+                    <FlipPage v-on:flip="kindChangePage" :maxPage="kmaxPage"></FlipPage>
+                   
+
+                 </div>
+
+             
+               <ul class="school_ul">
+                 
+                
+                   <router-link   tag="li" v-for="(item,index) in kindRows" :key="index" :to="{name:'schoolDetail',params: { id:item.id }}">
+                       <figure>
+                          <img :src="item.schoolUrl" />
+                           
+                           <figcaption>{{item.name}}</figcaption> 
+                       </figure>
+
+                   </router-link>  
+                  
+               </ul>
+
+        </div> 
+
+        
+        <div >
+
+                 <div class="school_head">
+
+                    <div class="school_type" >小学</div>
+                    
+                    <FlipPage v-on:flip="primaryChangePage" :maxPage="pmaxPage"></FlipPage>
+                   
+
+                 </div>
+
+             
+               <ul class="school_ul">
+                 
+                
+                   <router-link   tag="li" v-for="(item,index) in primaryRows" :key="index" :to="{name:'schoolDetail',params: { id: item.id }}">
+                       <figure>
+                          <img :src="item.schoolUrl" />
+                           
+                           <figcaption>{{item.name}}</figcaption> 
+                       </figure>
+
+                   </router-link>  
+                  
+               </ul>
+
+        </div> 
+
+ -->
+
+    </div>
+
+   
+
+<script type="text/javascript" src="/static/lib/mod.js"></script>
+<script>/*resourcemap*/
+require.resourceMap({
+  "res": {
+    "modules/lib/jquery": {
+      "url": "/static/lib/jquery.js",
+      "type": "js"
+    },
+    "modules/html/header2/header": {
+      "url": "/static/html/header2/header.js",
+      "type": "js",
+      "deps": [
+        "modules/lib/jquery"
+      ]
+    },
+    "modules/lib/vue": {
+      "url": "/static/lib/vue.js",
+      "type": "js"
+    },
+    "modules/lib/polyfill.min": {
+      "url": "/static/lib/polyfill.min.js",
+      "type": "js"
+    },
+    "modules/lib/axios": {
+      "url": "/static/lib/axios.js",
+      "type": "js"
+    },
+    "modules/html/smallSchool/schoolHome": {
+      "url": "/static/html/smallSchool/schoolHome.js",
+      "type": "js",
+      "deps": [
+        "modules/lib/vue",
+        "modules/lib/polyfill.min",
+        "modules/lib/axios"
+      ]
+    }
+  },
+  "pkg": {}
+});
+
+    require.async(['modules/html/header2/header'], function(app){
+        app.init();
+       
+    });
+
+
+    require.async(['modules/html/smallSchool/schoolHome'], function(app){
+        app.init();
+    });
+</script>
+<script type="text/javascript" charset="utf-8" src="http://192.168.3.245:8132/livereload.js"></script></body>
+</html>
+<!--[if lt IE 9]>   
+<script>
+        document.body.innerHTML = "";
+        var oDiv = document.createElement("div");
+        var strIE = '<p>您的浏览器版本较低，请升级浏览版本。或使用<br/><a href="http://www.firefox.com.cn/">Firefox 火狐浏览器</a><br/>或者<br/><a href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html">Chrome 谷歌浏览器</a></p>'
+        oDiv.id = "IEdiv";
+        oDiv.innerHTML = strIE;
+        document.body.appendChild(oDiv);
+</script>
+<![endif]-->
