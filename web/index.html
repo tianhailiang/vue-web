@@ -1,3 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+
+		ul li{
+			list-style:none;
+		}
+	</style>
+</head>
+<body>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+
+<div id="app">
+  <h1>Hello App!</h1>
+ 
+  <!-- 路由出口 -->
+  <!-- 路由匹配到的组件将渲染在这里 -->
+   <!--  <router-link to="/home">Go to Foo</router-link> -->
+   <router-view></router-view>
+</div>
+
+<style scoped>
+
+.arrow{
+  display: flex;
+  border:1px solid #dcdcdc;
+  height:30px;
+  border-radius: 10px;
+}
+
+.arrow span{
+  display: block;
+  width:30px;
+  height:30px;
+  text-align:center;
+  line-height:30px;
+}
+   
+.arrow span:nth-of-type(1){
+  border-right:1px solid #dcdcdc;
+}
+
+.arrow_font{
+  font-size:18px;
+  color:#dcdcdc;
+}
+
+.active{
+  color:#333;
+}
+
+
+
+</style>
+
+<template id="flip">
+	
+      <div class="arrow" >
+
+
+        
+          <span @click="previousPage">
+             <svg class="icon arrow_font" aria-hidden="true" :class="{active:preActive}">
+                  <use xlink:href="#icon-jiantou1"></use>
+             </svg>
+          </span>
+          <span @click="nextPage" >
+              <svg class="icon arrow_font" aria-hidden="true" :class="{active:nextActive}">
+                  <use xlink:href="#icon-jiantou"></use>
+             </svg>
+          </span>
+
+      </div>
+
+	              
+</template>
+
+
+
+
+<style scoped> 
+
+
+.school_box{
+  width:100%;
+  max-width:1440px;
+  height:1000px;
+ 
+  margin:0 auto;
+  padding-left:55px;
+  padding-right:55px;
+  box-sizing: border-box;
+
+}
+
+.school_head{
+  width:100%;
+  border-bottom:1px solid #dcdcdc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+  
+}
+
+
+.school_type{
+  line-height:53px;
+  font-size:24px;
+  color:#a0a0a0;
+  border-bottom: 1px solid #02b8ea;
+  text-align:center;
+
+}
+
+.school_ul{
+  width:1440px;
+  padding-top: 55px;
+  display: flex;
+  flex-wrap:wrap;
+
+}
+
+.school_ul li{
+  width:300px;
+  margin-right:45px;
+}
+
+.school_ul li:nth-of-type(4n+0){
+  margin-right:0;
+}
+
+.school_ul li img{
+  width:100%;
+  height:208px;
+
+}
+
+.school_ul li figcaption{
+  width:100%;
+  height:83px;
+  text-align:center;
+  color:#683905;
+  padding-top: 18px;
+  box-sizing: border-box;
+}
+
+
+</style>
+
+
+
+<template id="schoolList">
+	
+	    <div class="school_box">
+
+		      <div>
+
+	                 <div class="school_head">
+
+	                    <div class="school_type" >幼儿园</div>
+	                    
+	                    <flip-page v-on:flip="kindChangePage" :max-page="kmaxPage"></flip-page>
+	                   
+
+	                 </div>
+
+	               <ul class="school_ul">
+	                 
+	                
+	                   <router-link   tag="li" v-for="(item,index) in kindRows" :key="index" :to="{name:'schoolDetail',params: { id:item.id }}">
+	                       <figure>
+	                          <img :src="item.schoolUrl" />
+	                           
+	                           <figcaption>{{item.name}}</figcaption> 
+	                       </figure>
+
+	                   </router-link>  
+	                  
+	               </ul>
+
+	        </div> 
+
+        
+            <div >
+
+                 <div class="school_head">
+
+                    <div class="school_type" >小学</div>
+                    
+                     <flip-page v-on:flip="primaryChangePage" :max-page="pmaxPage"></flip-page>
+                   
+
+                 </div>
+
+             
+               <ul class="school_ul">
+                 
+                
+                   <router-link   tag="li" v-for="(item,index) in primaryRows" :key="index" :to="{name:'schoolDetail',params: { id: item.id }}">
+                       <figure>
+                          <img :src="item.schoolUrl" />
+                           
+                           <figcaption>{{item.name}}</figcaption> 
+                       </figure>
+
+                   </router-link>  
+                  
+               </ul>
+
+        </div>  
+
+    </div>
+</template>
+
+
+
+
+
 <style scoped> 
 
 .detail_box{
@@ -170,10 +401,9 @@
 
 </style>
 
-<template>
-	<div>
+<template id="schoolDetail">
+
           
-          <Top></Top>
 
      <div class="detail_box" >
      	
@@ -190,7 +420,7 @@
 
      	    <div class="detail_banner">
 
-             <SchoolBanner :rows="schoolBannerList"></SchoolBanner>
+            <!--  <SchoolBanner :rows="schoolBannerList"></SchoolBanner> -->
 
            </div>  
 
@@ -217,7 +447,7 @@
 
                     <h2>教学环境</h2>
 
-                    <FlipPage v-on:flip="teachingChangePage" :maxPage="teachMaxPage"></FlipPage>
+                    <flip-page v-on:flip="teachingChangePage" :max-page="teachMaxPage"></flip-page>
                 
                </div> 
 
@@ -246,7 +476,7 @@
 
                     <h2>课程介绍</h2>
 
-                    <FlipPage v-on:flip="courseChangePage" :maxPage="coursMaxPage"></FlipPage>
+                    <flip-page v-on:flip="courseChangePage" :max-page="coursMaxPage"></flip-page>
                 
                </div> 
 
@@ -274,7 +504,7 @@
 
                     <h2>宝贝食谱</h2>
 
-                    <FlipPage v-on:flip="babyChangePage" :maxPage="babyMaxPage"></FlipPage>
+                    <flip-page v-on:flip="babyChangePage" :max-page="babyMaxPage"></flip-page>
                 
                </div> 
 
@@ -352,158 +582,92 @@
 
      </div>     
 
-   </div>
+ 
 </template>
 
-<script>
 
-import Top from '../Header';
+<style scoped>
 
-import axios from 'axios';
-
-import SchoolBanner from './SchoolBanner';
-
-import FlipPage from './FlipPage';
-
-
-export default {
-  name: 'SchoolDetail',
-  data () {
-    return {
-      schoolImg:"",
-      schoolName:"",
-      schoolBannerList:[],
-      briefIntroduction:'',
-      size:4,
-      teachingEnvList:[],
-      teachingRows:[],
-      teachMaxPage:0,
-      courseList:[],
-      coursRows:[],
-      coursMaxPage:0,
-      babyRecipesList:[],
-      babyRows:[],
-      babyMaxPage:0,
-      campusDynamics:[],
-      notice:[],
-      educationalInformation:[],
-      shows:[true,false,false]
-     
-
-    }
-  },
-  components: {
-    Top,SchoolBanner,FlipPage
-  },
-
-  methods:{
-
-     
-    teachingChangePage:function(currentPage){
-
-
-        this.$set(this,"teachingRows",this.teachingEnvList.slice(currentPage*this.size,(currentPage+1)*this.size)); 
-          
-    },
-    
-    courseChangePage:function(currentPage){
-
-        
-      this.$set(this,"coursRows",this.courseList.slice(currentPage*this.size,(currentPage+1)*this.size)); 
-    },
-
-    babyChangePage:function(currentPage){
-
-        
-      this.$set(this,"babyRows",this.babyRecipesList.slice(currentPage*this.size,(currentPage+1)*this.size)); 
-    },
-
-     toggleTabs: function(idx) {
-            
-          this.shows.forEach(function(value,index,array){
-               
-                 array[index]=false;  
-
-           });
-
-          
-          
-           this.shows.splice(idx, 1, true);
-
-           
-
-     }
-
-    
-
-  },
-
-  mounted:function(){
-
-  	// console.log(this.$route.params)
-
-  	axios.get("http://localhost:8888/static/mock/school/schoolDetail.json",{
-
-  		      params:{
-  		      	schoolId:this.$route.params.id
-  		      }
-               
-             })
-            .then(function (response) {
-
-              
-
-              var result =response.data;
-
-                
-                if(result.code==0){
-
-                   console.log(result)
-
-                   this.$set(this,'schoolImg',result.data.topImg);
-                   this.$set(this,"schoolName",result.data.schoolName);
-                   this.$set(this,"schoolBannerList",result.data.schoolBanner);
-                   this.$set(this,'briefIntroduction',result.data.briefIntroduction);
-                   //教学环境列表
-                  this.$set(this,'teachingEnvList',result.data.TeachingEnvironment);
-                  this.$set(this,"teachingRows",this.teachingEnvList.slice(0,this.size));
-                  this.$set(this,"teachMaxPage",Math.ceil(this.teachingEnvList.length/this.size));
-                     //课程介绍
-
-				  this.$set(this,'courseList',result.data.CourseIntroduction);
-                  this.$set(this,"coursRows",this.courseList.slice(0,this.size));
-                  this.$set(this,"coursMaxPage",Math.ceil(this.courseList.length/this.size));
-
-                    //宝贝食谱
-
-                  this.$set(this,'babyRecipesList',result.data.BabyRecipes);
-                  this.$set(this,"babyRows",this.babyRecipesList.slice(0,this.size));
-                  this.$set(this,"babyMaxPage",Math.ceil(this.babyRecipesList.length/this.size));
-                   //校园动态
-
-                  this.$set(this,"campusDynamics",result.data.CampusDynamics); 
-                   //校园公告
-                  this.$set(this,"notice",result.data.Notice);
-                  //教育资讯
-
-                  this.$set(this,"educationalInformation",result.data.educationalInformation);
-
-                  
-                }else{
-
-                  console.log(result.msg)
-                } 
-                
-                
-
-            }.bind(this))
-            .catch(function (error) {
-                console.log(error);
-            });
-  }
-
+.detail_box{
+	width:100%;
+	max-width:1440px;
+	margin:0 auto;
 
 }
 
 
-</script>
+.detail_top{
+	width:100%;
+	height:290px;
+	background:#e4f460;
+	box-sizing: border-box;
+	padding-left: 110px;
+	padding-top: 40px;
+	background:#edf683;
+}
+
+.detail_top figure{
+	display: flex;
+	align-items: center;
+}
+
+.school_img{
+   width:380px;
+   border:10px solid #fff;
+   border-bottom:0;
+   box-sizing: border-box;
+   height:250px;
+}
+
+
+.school_name{
+
+	margin-left: 75px;
+	
+	font-size: 36px;
+	color:#000;
+}
+
+
+.detail_main{
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+</style>
+
+
+<template id="newsInformation">
+
+
+  	  <div class="detail_box" >
+
+  	     <div class="detail_top" >
+	     	     <figure >
+	                     <img  class="school_img" :src="$route.query.headImg" />
+	                           
+	                     <figcaption class="school_name">{{$route.query.name}}</figcaption> 
+	              </figure>
+
+     	</div>
+
+     	<div class="detail_main" >
+           
+             <div>
+             	 学校首页>{{type}}
+             </div>
+             <div v-html="content"></div>
+
+        </div>
+
+      </div>
+
+	
+</template>
+
+
+
+<script src="app.js" ></script>
+	
+</body>
+</html>
