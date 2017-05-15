@@ -11,6 +11,10 @@ import SmallSchool from '../components/page/smallSchool/SmallSchool' // 微校�
 import SchoolDetail from '../components/page/smallSchool/SchoolDetail' //学校详情页模块
 import NewsInformation from '../components/page/smallSchool/NewsInformation' //学校新闻详情页
 
+import ExquisiteList from '../components/page/exquisiteClassroom/ExquisiteList' //精品课堂模块
+import RecordingPlayback from '../components/page/exquisiteClassroom/RecordingPlayback' //精品课堂播放界面
+
+
 Vue.use(Router)
 
 export default new Router({
@@ -52,6 +56,17 @@ export default new Router({
       name:'newsInformation',
       component:NewsInformation
      
+    },
+     {
+      path: '/exquisiteList',
+      name: 'exquisiteList',
+      component: ExquisiteList
+      
+    },
+
+    { path: '/recordingPlayback/:id',
+      name:'recordingPlayback',
+      component: RecordingPlayback
     }
 
 

@@ -384,6 +384,9 @@ nav{
                 <li><a href="./pages/courseList/courseList.html">一对一家教</a></li>
                 <li><a class="nav-quxue" href="./quxue.html">趣学英语</a></li>
                 <li>
+                     <router-link to="/exquisiteList" active-class="active" exact>精品课堂</router-link>
+                </li>
+                <li>
                      <router-link to="/smallSchool" active-class="active" exact>微校</router-link>
                 </li>
                 

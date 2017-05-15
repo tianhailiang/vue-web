@@ -77,9 +77,6 @@
 
     <div class="school_box">
         
-      <!--  <SchoolList :rows="kindRows" type="幼儿园" v-on:flip="kindChangePage" :maxPage="kmaxPage" ></SchoolList>
-
-         <SchoolList :rows="primaryRows" type="小学" v-on:flip="primaryChangePage" :maxPage="pmaxPage"></SchoolList> -->
 
           <div >
 
