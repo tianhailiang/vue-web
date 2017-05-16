@@ -8,9 +8,9 @@
   	"teacherName":"赵老师",
   	"courseList":[
 
-       {"videoSource":"http://www.w3school.com.cn/example/html5/mov_bbb.mp4","courseName":"加法"},
-       {"videoSource":"http://www.w3school.com.cn/example/html5/mov_bbb.mp4","courseName":"减法"},  
-       {"videoSource":"http://www.w3school.com.cn/example/html5/mov_bbb.mp4","courseName":"乘法"}    
+       {"videoSource":"http://www.w3school.com.cn/example/html5/mov_bbb.mp4","courseName":"加法","source":"http://www.w3school.com.cn/example/html5/mov_bbb.mp4","type":"mp4"},
+       {"videoSource":"http://www.w3school.com.cn/example/html5/mov_bbb.mp4","courseName":"减法","source":"http://www.w3school.com.cn/example/html5/mov_bbb.mp4","type":"mp4"},  
+       {"videoSource":"http://www.w3school.com.cn/example/html5/mov_bbb.mp4","courseName":"乘法","source":"http://www.w3school.com.cn/example/html5/mov_bbb.mp4","type":"mp4"}    
   	]
 
   }
