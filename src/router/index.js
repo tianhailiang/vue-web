@@ -12,6 +12,7 @@ import SchoolDetail from '../components/page/smallSchool/SchoolDetail' //学校�
 import NewsInformation from '../components/page/smallSchool/NewsInformation' //学校新闻详情页
 
 import ExquisiteList from '../components/page/exquisiteClassroom/ExquisiteList' //精品课堂模块
+import CoursePlayback from '../components/page/exquisiteClassroom/CoursePlayback' //精品课堂课程回放详情页
 import RecordingPlayback from '../components/page/exquisiteClassroom/RecordingPlayback' //精品课堂播放界面
 
 
@@ -61,6 +62,12 @@ export default new Router({
       path: '/exquisiteList',
       name: 'exquisiteList',
       component: ExquisiteList
+      
+    },
+    {
+      path: '/coursePlayback/:id',
+      name: 'coursePlayback',
+      component: CoursePlayback
       
     },
 

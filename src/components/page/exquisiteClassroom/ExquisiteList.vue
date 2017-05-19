@@ -3,7 +3,7 @@
 .school_box{
   width:100%;
   max-width:1440px;
-  height:1000px;
+  
  
   margin:0 auto;
   padding-left:55px;
@@ -166,7 +166,7 @@
 
 
 
-	                   <router-link   tag="li" v-for="(item,index) in EnglishRows" :key="index" :to="{name:'recordingPlayback',params: { id:item.courseId }}">
+	                   <router-link   tag="li" v-for="(item,index) in EnglishRows" :key="index" :to="{name:'coursePlayback',params: { id:item.courseId }}">
 	                      
 	                       <dl>
 	                       	 <dt>
@@ -205,7 +205,7 @@
 
 
 
-	                   <router-link   tag="li" v-for="(item,index) in ChineseRows" :key="index" :to="{name:'recordingPlayback',params: { id:item.courseId }}">
+	                   <router-link   tag="li" v-for="(item,index) in ChineseRows" :key="index" :to="{name:'coursePlayback',params: { id:item.courseId }}">
 	                      
 	                       <dl>
 	                       	 <dt>
@@ -244,7 +244,7 @@
 
 
 
-	                   <router-link   tag="li" v-for="(item,index) in MathRows" :key="index" :to="{name:'recordingPlayback',params: { id:item.courseId }}">
+	                   <router-link   tag="li" v-for="(item,index) in MathRows" :key="index" :to="{name:'coursePlayback',params: { id:item.courseId }}">
 	                      
 	                       <dl>
 	                       	 <dt>
@@ -284,7 +284,7 @@
 
 
 
-	                   <router-link   tag="li" v-for="(item,index) in OtherRows" :key="index" :to="{name:'recordingPlayback',params: { id:item.courseId }}">
+	                   <router-link   tag="li" v-for="(item,index) in OtherRows" :key="index" :to="{name:'coursePlayback',params: { id:item.courseId }}">
 	                      
 	                       <dl>
 	                       	 <dt>
@@ -364,6 +364,7 @@ export default {
     },
 
     OtherChangePage(currentPage){
+    	
 
     	this.$set(this,"OtherRows",this.OtherList.slice(currentPage*this.size,(currentPage+1)*this.size)); 
     }
