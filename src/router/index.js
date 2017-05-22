@@ -2,7 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '../components/page/login/Login' //登陆模块
 import Register from '../components/page/register/Register' //注册模块
-import Index from '../components/page/Index'
+import Index from '../components/page/Index'  //index 首页
+
+import NotFoundComponent from '../components/page/NotFoundComponent' //404页面
 
 import UserManagement from '../components/page/system_management/User_management'
 import MTt from '../components/page/myTimetable/MyTimetable' 
@@ -19,8 +21,10 @@ import RecordingPlayback from '../components/page/exquisiteClassroom/RecordingPl
 Vue.use(Router)
 
 export default new Router({
- 
+  mode: 'history',
   routes: [
+    { path: '*', component: NotFoundComponent },
+
     {
       path: '/',
       name: 'Index',

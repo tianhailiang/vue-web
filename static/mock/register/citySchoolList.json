@@ -1,0 +1,45 @@
+{
+  "code": 0,
+  "message": "用户登录成功。",
+  "data":{
+
+  	"schoolList":[
+     {
+     	"schoolName":"贵阳一小",
+     	"schoolId":"01",
+     	"calssList":[
+         {"className":"一年一班","classId":"01"},
+         {"className":"二年一班","classId":"02"},
+         {"className":"三年一班","classId":"03"}
+
+     	]
+
+     },
+     {
+     	"schoolName":"贵阳二小",
+     	"schoolId":"01",
+     	"calssList":[
+         {"className":"一年一班","classId":"01"},
+         {"className":"二年一班","classId":"02"},
+         {"className":"三年一班","classId":"03"}
+
+     	]
+
+     },
+     {
+     	"schoolName":"贵阳三小",
+     	"schoolId":"01",
+     	"calssList":[
+         {"className":"一年一班","classId":"01"},
+         {"className":"二年一班","classId":"02"},
+         {"className":"三年一班","classId":"03"}
+
+     	]
+
+     }
+
+  ]
+
+ }
+
+}

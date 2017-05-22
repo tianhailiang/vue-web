@@ -233,6 +233,27 @@
 }
 
 
+
+
+</style>
+
+<style type="text/css">
+.el-select{
+
+	margin-left:20px;
+    width: 306px;
+   
+  
+}
+
+
+.el-input__inner{
+	  border-radius: 20px;
+    border: 1px solid #6a3906;
+    height:35px;
+    text-align:center;
+}
+
 </style>
 <template>
 
@@ -269,10 +290,14 @@
 				    <legend>西南</legend>
 
 				     <div class="province_box" v-for="(proItem,index) in topList" :key="index">   
-		                    <span class="province">贵州</span>
-		                    <ul class="city_list_ul">
-		                    	<li @click="slectCity">贵阳</li>
-		                    	<li @click="slectCity">遵义</li>
+		                    <span class="province">{{proItem.Province}}</span>
+		                    <ul class="city_list_ul" >
+
+		                    	<li @click="slectCity" v-for="cityItem in proItem.cityList" :key="cityItem.cityId">
+                                    {{cityItem.cityName}}
+		                    	
+		                    	</li>
+		                    	
 		                    </ul>
 				    </div>
 				</fieldset>
@@ -282,7 +307,7 @@
              <ul class="query_ul" >
 
 	             <li v-for="(item, index) in computedList" v-bind:key="index" v-bind:data-index="index" @click="slectCity">
-		                 {{ item}}
+		                 {{ item.cityName}}
 		         </li>
             </ul>
 
@@ -297,7 +322,15 @@
 
 					   <li>
 					   	 <label>学校</label>
-					   	 <input type="text" name="" value="" placeholder="请选择学校">
+					   	<!--  <input type="text" name="" value="" placeholder="请选择学校"> -->
+					   	<el-select v-model="schoolValue" placeholder="请选择学校" >
+							    <el-option
+							      v-for="item in schoolList"
+							      :key="item.schoolId"
+							      :label="item.schoolName"
+							      :value="item.schoolId">
+							    </el-option>
+						  </el-select>
 
 					   </li>
 
@@ -315,7 +348,7 @@
 
 					   <li>
 							<label>邮箱</label>
-							<input type="text" class="usermessage"  placeholder="请输入邮箱" v-on:blur="user($event.target.value)" ref="email" v-model="userName" autofocus><span class="prompt" >{{userTitle}}</span>
+							<input type="text" class="usermessage"  placeholder="请输入邮箱" v-on:blur="user($event.target.value)" ref="email" v-model="userName" ><span class="prompt" >{{userTitle}}</span>
 							
 						</li>
 
@@ -367,12 +400,11 @@ export default {
   name: 'Register',
   data () {
     return {
-      currentCity:"贵阳",
+      currentCity:"",
+      currentCityId:'',
       topList:[], 	
       query:'',
-      cityList:[
-        "贵阳","遵义","大同","贵水"
-      ], 	
+      cityList:[], 	
       userTitle:"",
       pwdTitle:"",
       userName:"",
@@ -380,7 +412,9 @@ export default {
       rpassword:"",
       checked:true,
       rpwdTitle:"",
-      isShowCity:false
+      isShowCity:false,
+      schoolList:[],
+      schoolValue:''
     }
   },
    components: {
@@ -399,7 +433,7 @@ export default {
 
 	      return this.cityList.filter(function (item) {
 	      	// console.log(this) //为Undefined
-	        return item.toLowerCase().indexOf(vm.query.toLowerCase()) !== -1
+	        return item.cityName.toLowerCase().indexOf(vm.query.toLowerCase()) !== -1
 	      })
     }
   },
@@ -424,6 +458,7 @@ export default {
 		      if(message==""){
 		      	// this.$refs.email.focus();
 		        this.$set(this,'userTitle', "邮箱不能为空");
+
 		      }else{
 		         //先验证邮箱
 
@@ -527,8 +562,30 @@ export default {
                  
                  //获取顶级联动
                  this.$set(this,"topList",result.data);
+                 
+                 //获取当前城市
+                 this.$set(this,"currentCity",result.data[0].cityList[0].cityName);
+                 //获取当前城市id
+                  this.$set(this,"currentCityId",result.data[0].cityList[0].cityId);
 
+                 //获取所有城市
+                var cityArray= this.topList.map(function(item,index){
+                    
+                    return item.cityList.map(function(cityItem,cityIndex){
+                    	return cityItem;
+                    })
 
+                 });
+
+                 var that=this;
+
+                cityArray.map(function(item,index){
+                	that.$set(that,"cityList",that.cityList.concat(item));
+                });
+
+                 // console.log(this.cityList) //模糊查询城市cityList集合
+
+                
                   
                 }else{
 
@@ -541,6 +598,33 @@ export default {
             .catch(function (error) {
                 console.log(error);
             });
+
+
+            //根据默认的城市请求显示学校 班级数据
+
+           axios.get("http://localhost:8888/static/mock/register/citySchoolList.json",{
+              params:{
+              	cityId:this.currentCityId
+              }
+         }).then(function(response){
+
+         	 var result=response.data;
+
+         	 if(result.code==0){
+               
+               //获取学校
+               this.$set(this,"schoolList",result.data.schoolList);
+               // console.log(this.schoolList)
+
+         	 }else{
+         	 	console.log(result.msg);
+         	 }
+
+         }.bind(this))
+         .catch(function(error){
+         	console.log(error);
+         });
+
 
 
    }   

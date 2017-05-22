@@ -8,49 +8,15 @@
       "cityList":[
       	{
           "cityName":"贵阳",
-          "cityId":"001",
-          "area":[
-
-            {
-              "areaName":"大洋区",
-              "schoolList":[
-               {
-                 "schoolName":"贵阳一小",
-                 "classList":[
-
-                   {"className":"一年一"},
-                   {"className":"二年一"},
-                   {"className":"三年一"}
-                 ]
-
-               },
-
-               {
-                 "schoolName":"贵阳二小",
-                 "classList":[
-
-                   {"className":"一年一"},
-                   {"className":"二年一"},
-                   {"className":"三年一"}
-                 ]
-
-               },
-
-                {
-                 "schoolName":"贵阳三小",
-                 "classList":[
-
-                   {"className":"一年一"},
-                   {"className":"二年一"},
-                   {"className":"三年一"}
-                 ]
-
-               }
-
-
-              ]
-             }
-          ]
+          "cityId":"001"
+        },
+        {
+          "cityName":"遵义",
+          "cityId":"002"
+        },
+        {
+          "cityName":"贵南",
+          "cityId":"002"
         }
      ]
     },
@@ -60,51 +26,17 @@
       "cityList":[
       	{
           "cityName":"成都",
-          "cityId":"001",
-          "area":[
-
-            {
-              "areaName":"大洋区",
-              "schoolList":[
-               {
-                 "schoolName":"贵阳一小",
-                 "classList":[
-
-                   {"className":"一年一"},
-                   {"className":"二年一"},
-                   {"className":"三年一"}
-                 ]
-
-               },
-
-               {
-                 "schoolName":"贵阳二小",
-                 "classList":[
-
-                   {"className":"一年一"},
-                   {"className":"二年一"},
-                   {"className":"三年一"}
-                 ]
-
-               },
-
-                {
-                 "schoolName":"贵阳三小",
-                 "classList":[
-
-                   {"className":"一年一"},
-                   {"className":"二年一"},
-                   {"className":"三年一"}
-                 ]
-
-               }
-
-
-              ]
-             }
-          ]
+          "cityId":"001"
+        },
+        {
+          "cityName":"达州",
+          "cityId":"002"
+        },
+        {
+          "cityName":"成阳",
+          "cityId":"002"
         }
-     ]
+      ]
     }
   ]
 

@@ -27,7 +27,6 @@ module.exports = function(env) {
             main: './main.js',
             vendor: 'moment'
           
-
         },
         output: {
             filename: '[name].js',

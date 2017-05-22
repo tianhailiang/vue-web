@@ -44,6 +44,7 @@
 .school_ul li{
   width:300px;
   margin-right:45px;
+  
 }
 
 .school_ul li:nth-of-type(4n+0){

@@ -4,10 +4,10 @@
 .banner_img{
 	width:100%;
 	height:400px;
+  background:yellow;
 
 }
  
-
 </style>
 
 <style type="text/css" >
