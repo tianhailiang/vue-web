@@ -1,0 +1,111 @@
+{
+  "code": 0,
+  "message": "用户登录成功。",
+  "data":[
+
+    {
+      "Province":"贵州",
+      "cityList":[
+      	{
+          "cityName":"贵阳",
+          "cityId":"001",
+          "area":[
+
+            {
+              "areaName":"大洋区",
+              "schoolList":[
+               {
+                 "schoolName":"贵阳一小",
+                 "classList":[
+
+                   {"className":"一年一"},
+                   {"className":"二年一"},
+                   {"className":"三年一"}
+                 ]
+
+               },
+
+               {
+                 "schoolName":"贵阳二小",
+                 "classList":[
+
+                   {"className":"一年一"},
+                   {"className":"二年一"},
+                   {"className":"三年一"}
+                 ]
+
+               },
+
+                {
+                 "schoolName":"贵阳三小",
+                 "classList":[
+
+                   {"className":"一年一"},
+                   {"className":"二年一"},
+                   {"className":"三年一"}
+                 ]
+
+               }
+
+
+              ]
+             }
+          ]
+        }
+     ]
+    },
+
+    {
+      "Province":"四川",
+      "cityList":[
+      	{
+          "cityName":"成都",
+          "cityId":"001",
+          "area":[
+
+            {
+              "areaName":"大洋区",
+              "schoolList":[
+               {
+                 "schoolName":"贵阳一小",
+                 "classList":[
+
+                   {"className":"一年一"},
+                   {"className":"二年一"},
+                   {"className":"三年一"}
+                 ]
+
+               },
+
+               {
+                 "schoolName":"贵阳二小",
+                 "classList":[
+
+                   {"className":"一年一"},
+                   {"className":"二年一"},
+                   {"className":"三年一"}
+                 ]
+
+               },
+
+                {
+                 "schoolName":"贵阳三小",
+                 "classList":[
+
+                   {"className":"一年一"},
+                   {"className":"二年一"},
+                   {"className":"三年一"}
+                 ]
+
+               }
+
+
+              ]
+             }
+          ]
+        }
+     ]
+    }
+  ]
+
+ } 
