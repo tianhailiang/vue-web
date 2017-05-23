@@ -48,6 +48,10 @@
  	position: relative;
  }
 
+ .register_ul li.pwd_li{
+ 	margin-top: 44px;
+ }
+
 .register_ul li label{
 	width:60px;
 	text-align:right;
@@ -75,8 +79,16 @@
     align-items: center;
     margin-top:33px;
     font-size: 16px;
+    position: relative;
   } 
 
+.agree_title{
+	width:auto;
+	
+   position: absolute;
+    right: -23px;
+    color: red;
+}
 
 
   .register_button {
@@ -100,19 +112,11 @@
 	position: absolute;
     display: inline-block;
     color: red;
-  right:-100px;
+   right:-120px;
 
 }
 
-.radio{
 
-	width:15px;
-	height:15px;
-	display: inline-block;
-	border:1px solid #6b4013;
-	border-radius: 50%;
-	margin-right: 5px;
-}
 
 .btn_box{
 	display: flex;
@@ -232,8 +236,17 @@
 	background:#cfcfcf;
 }
 
+.span_title{
+	position: absolute;
+    left: 90px;
+    top: 39px;
+    font-size: 12px;
+    color:#a0a0a0;
+}
 
-
+.agreement{
+	margin-left:10px;
+}
 
 </style>
 
@@ -252,6 +265,19 @@
     border: 1px solid #6a3906;
     height:35px;
     text-align:center;
+}
+
+
+
+
+.radio .el-radio__inner{
+
+	width:15px;
+	height:15px;
+	display: inline-block;
+	border:1px solid #6b4013;
+	border-radius: 50%;
+	margin-right: 5px;
 }
 
 </style>
@@ -322,8 +348,8 @@
 
 					   <li>
 					   	 <label>学校</label>
-					   	<!--  <input type="text" name="" value="" placeholder="请选择学校"> -->
-					   	<el-select v-model="schoolValue" placeholder="请选择学校" >
+					   
+					   	<el-select v-model="schoolValue" placeholder="请选择学校" @change="selectSchool">
 							    <el-option
 							      v-for="item in schoolList"
 							      :key="item.schoolId"
@@ -332,48 +358,68 @@
 							    </el-option>
 						  </el-select>
 
+						  <span class="prompt" >{{schoolTitle}}</span>
+
 					   </li>
 
 					    <li>
 					   	 <label>班级</label>
-					   	 <input type="text" name="" value="" placeholder="请选择班级">
+					   	
+					   	 <el-select v-model="classValue" placeholder="请选择班级" @change="selectClass">
+							    <el-option
+							      v-for="item in classList"
+							      :key="item.classId"
+							      :label="item.className"
+							      :value="item.classId">
+							    </el-option>
+						  </el-select>
+
+						   <span class="prompt" >{{classTitle}}</span>
 
 					   </li>
 
 					   <li>
 					   	 <label>姓名</label>
-					   	 <input type="text" name="" value="" placeholder="请输入姓名">
+					   	 <input type="text" v-model="fullName" placeholder="请输入姓名" v-on:blur="full($event.target.value)">
+					   	 <span class="prompt" >{{fullNameTitle}}</span>
 
 					   </li>
 
 					   <li>
 							<label>邮箱</label>
-							<input type="text" class="usermessage"  placeholder="请输入邮箱" v-on:blur="user($event.target.value)" ref="email" v-model="userName" ><span class="prompt" >{{userTitle}}</span>
+							<input type="text"   placeholder="请输入邮箱" v-on:blur="email($event.target.value)" ref="email" v-model="emailName" ><span class="prompt" >{{emailTitle}}</span>
 							
 						</li>
 
 						 <li>
 					   	 <label>用户名</label>
-					   	 <input type="text" name="" value="" placeholder="请输入用户名">
+					   	 <input type="text"  v-model="userName" placeholder="请输入用户名" v-on:blur="user($event.target.value)">
+					   	  <span class="prompt" >{{userNameTitle}}</span>
+					   	  <span class="span_title">不能超过15个字母或汉子</span>
 
 					   </li>
 
 
-						<li>
+						<li class="pwd_li">
 						    <label>密码</label>
-						    <input type="password" class="usermessage pwd"  placeholder="请输入密码" v-on:blur="pwd($event.target.value)" v-model="password" ref="pwd"><span class="prompt">{{pwdTitle}}</span>
+						    <input type="password"   placeholder="请输入密码" v-on:blur="pwd($event.target.value)" v-model="password" ref="pwd">
+						    <span class="prompt">{{pwdTitle}}</span>
+						    <span class="span_title">密码长度8-16位，数字、字母、字符至少包含2种</span>
 							
 						</li>
-						<li>
+						<li class="pwd_li">
 							<label>确认密码</label>
-						    <input type="password"   placeholder="请确认密码" v-on:change="rpwd($event.target.value)" v-model="rpassword"><span></span>
+						    <input type="password"   placeholder="请确认密码" v-on:change="rpwd($event.target.value)" v-model="rpassword">
+						    <span class="prompt">{{rpwdTitle}}</span>
 						</li>
 						
 					</ul>
 					<div class="read">
-						 <span class="radio" ></span>
-					     <span>阅读并接受</span>
-						<a href="#" class="">优看用户协议</a>
+						 
+						  <el-radio class="radio" v-model="radio" label="1" >阅读并接受</el-radio>
+					    
+						  <a href="#" class="agreement">优看用户协议</a>
+						  <span class="agree_title">{{agreeTitle}}</span>
 					</div>
 					
                     <div class="btn_box" >
@@ -405,16 +451,27 @@ export default {
       topList:[], 	
       query:'',
       cityList:[], 	
-      userTitle:"",
+      emailTitle:"",
       pwdTitle:"",
-      userName:"",
+      emailName:"",
+      emailFlag:false,
       password:"",
       rpassword:"",
       checked:true,
       rpwdTitle:"",
       isShowCity:false,
       schoolList:[],
-      schoolValue:''
+      schoolValue:'',
+      schoolTitle:'',
+      classList:[],
+      classValue:'',
+      classTitle:'',
+      fullName:'',
+      fullNameTitle:'',
+      userName:'',
+      userNameTitle:'',
+      radio:0,
+      agreeTitle:''
     }
   },
    components: {
@@ -454,10 +511,51 @@ export default {
 
           },
 
-		    user: function (message) {
+          selectSchool:function(){
+            //选择学校
+             // console.log(this.schoolValue)
+
+              this.$set(this,"schoolTitle","");
+              this.$set(this,"classValue",'');// 先清空一下
+            
+             var vm=this;
+
+             this.schoolList.map(function(item){
+             	if(vm.schoolValue==item.schoolId){
+
+             		vm.$set(vm,"classList",item.classList);
+             	}
+             })
+
+             // console.log(this.classList) 
+
+
+          },
+
+          selectClass:function(){
+          	this.$set(this,"classTitle","");
+
+          },
+
+          full:function(val){
+          	//选择姓名 失去焦点触发事件
+
+          	if(val==''){
+
+          	   this.$set(this,'fullNameTitle', "姓名不能为空");
+          	}else{
+
+          		this.$set(this,'fullNameTitle', "");
+
+          	}
+
+          },
+
+		  email: function (message) {
 		      if(message==""){
 		      	// this.$refs.email.focus();
-		        this.$set(this,'userTitle', "邮箱不能为空");
+		        this.$set(this,'emailTitle', "邮箱不能为空");
+		        this.$set(this,"emailFlag",false);
 
 		      }else{
 		         //先验证邮箱
@@ -467,11 +565,11 @@ export default {
 		         if(reg.test(message)){
 	                var that =this;
 
-
-	                axios.get('http://localhost:8080/static/mock/login/login.json', {
+                  
+	                axios.get('http://localhost:8888/static/mock/login/login.json', {
 	                   //验证邮箱有没有注册过 	
 					    params: {
-					      "email": that.userName
+					      "email": that.emailName
 					    }
 					  })
 					  .then(function (response) {
@@ -479,10 +577,13 @@ export default {
 	          
 				          if(result.code==0){
 
-	                         that.$set(that,'userTitle', "");
+	                         that.$set(that,'emailTitle', "");
+	                          that.$set(that,"emailFlag",true);
 
 				          }else{
-				          	 that.$set(that,'userTitle', "该邮箱已被注册");
+				          	 that.$set(that,'emailTitle', "该邮箱已被注册");
+				          	 that.$set(that,"emailFlag",false);
+
 				          }
 
 
@@ -492,34 +593,70 @@ export default {
 					    console.log(error);
 					  });  	  
 
-
+                   
+                    
 		         	
 		         }else{
 		         	//获取元素焦点
 		         	
 		         	// this.$refs.email.focus();
 		         	
-		         	this.$set(this,'userTitle', "邮箱地址不合法！");
+		         	this.$set(this,'emailTitle', "邮箱地址不合法！");
+		         	this.$set(this,"emailFlag",false);
+
 		         }
 
 		      }
+	       },
+
+
+	       user:function(val){
+
+		       	if(val==''){
+		       		
+		       		this.$set(this,"userNameTitle","用户名不能为空");
+
+		       		return false;
+		       	}else{
+
+                    //验证用户名格式
+		       		var reg=/^(?!_)(?!.*?_$)[a-zA-Z_\u4e00-\u9fa5]{1,15}$/;
+
+		       		// console.log(reg.test(val))
+
+		       		if(!reg.test(val)){
+
+                       this.$set(this,"userNameTitle","用户名格式不对");
+
+                       return false;
+		       		}else{
+
+		       			this.$set(this,"userNameTitle","");
+		       			return true;
+		       		}
+		       	}
+
 	       },
 	      
 	      pwd:function(pwd){
 
 		       if(pwd==""){
 		       	     // this.$refs.pwd.focus();
-		            this.$set(this,'pwdTitle', "密码不能为空");
-		       }else if(pwd.length<8 || pwd.length>16){
+		             this.$set(this,'pwdTitle', "密码不能为空");
+		             return false;
 
-		            this.$set(this,'pwdTitle', "仅支持8-16位密码");
-		       } else{
-		             var reg = /^(\w){8,16}$/;
+		       }else{
 
-		             if(reg.test(pwd)){
-		             	this.$set(this,'pwdTitle', "");
+                     var reg=/(?!^[0-9]+$)(?!^[A-z]+$)(?!^[^A-z0-9]+$)^.{8,16}$/;
+
+
+		            
+		             if(!reg.test(pwd)){
+		             	this.$set(this,'pwdTitle',"密码格式不正确");
+		             	return false;
 		             }else{
-		               this.$set(this,"pwdTitle","密码出现非法字符");
+		               this.$set(this,"pwdTitle","");
+		               return true;
 
 		             }
 		   	   
@@ -528,22 +665,111 @@ export default {
 	      },
 
 	      rpwd:function(rpwd){
-            console.log(rpwd)
+	      	
+           
             if(rpwd==""){
                this.$set(this,'rpwdTitle', "请再次输入密码");
+               return false;
             }else if(rpwd!==this.password){
+                
             	this.$set(this,'rpwdTitle', "两次密码不一致");
+            	return false;
             }else{
+
             	this.$set(this,'rpwdTitle', "");
+            	return true;
             }
 
 
 	      },
 
-	      register:function(){
+	     
 
-	      	console.log(1)
-	      }
+	      register:function(){
+             //点击注册 
+
+             if(this.schoolValue==""){
+
+                   this.$set(this,"schoolTitle","请选择学校");
+
+                   return;
+
+              }
+
+
+              if(this.classValue==""){
+              	this.$set(this,"classTitle","请选择班级");
+              	return;
+              }
+
+              if(this.fullName==""){
+              	this.$set(this,"fullNameTitle","请填写姓名");
+              	return;
+              }
+
+              if(this.emailName==""){
+              	this.$set(this,"emailTitle","请填写邮箱");
+              	return;
+              }
+
+              if(!this.emailFlag){
+                  //判断邮箱验证 
+                 
+              	return;
+              }
+             
+              if(!this.user(this.userName)){
+              	//判断用户名验证
+              	
+              	return;
+              } 
+
+              if(!this.pwd(this.password)){
+              	//判断密码验证
+              	return;
+              }
+             
+              if(!this.rpwd(this.rpassword)){
+              	//判断确认密码验证
+              	return;
+              }
+
+
+
+             if(!this.radio){
+             	//先验证有没有接受协议
+             	this.$set(this,"agreeTitle","请先接受协议");
+
+
+             }else{
+
+                this.$set(this,"agreeTitle","");
+
+
+                 //给邮箱发送验证
+		           axios.post("http://ucan365.com/api/view/guest/postEmail/addRegister",{
+		              data:{
+		              	t:new Date().getTime(),
+		              	email:this.emailName,
+		              	password:this.pwd,
+		              	type: "用户注册"
+		              }
+		         }).then(function(response){
+
+		         	 var result=response.data;
+
+		         	 alert(response)
+
+		         }.bind(this))
+		         .catch(function(error){
+		         	console.log(error);
+		         });
+               
+
+             }
+
+   	
+	    }
 
    },
 
@@ -625,6 +851,41 @@ export default {
          	console.log(error);
          });
 
+        
+          //注册成功后验证邮箱
+            var h = window.location.href;
+		     var str = h.split("?")[1];
+		     console.log(str)
+		    
+			if(str != null ) {
+				
+		         //邮箱验证 注册成功
+
+				 axios.get("http://ucan365.com/api/view/guest/postEmail/queryValidAndRegister",{
+		              params:{
+		              	t:new Date().getTime(),
+		              	randomCode: str
+		              }
+		         }).then(function(response){
+
+		         	 var result=response.data;
+
+		         	 if(result.code==0){
+		               
+		                this.$set(this,"tip","注册成功！页面将在3秒后跳转！");
+		                setTimeout("location.href='../login/login.html'",3000);
+
+		         	 }else{
+
+		         	 	alert("链接已失效！请重新注册！");
+		         	 }
+
+		         }.bind(this))
+		         .catch(function(error){
+		         	console.log(error);
+		         });
+
+			}
 
 
    }   
