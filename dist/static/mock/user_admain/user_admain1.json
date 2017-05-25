@@ -1,0 +1,131 @@
+
+{
+  "code":0,
+  "msg":"业务信息",
+  "data":{
+     
+    "rows": [{
+          
+          "name": "thg",
+          "phoneNumber": "15242755275",
+          "id":0,
+          "account":"ucan1",
+          "userQQ":"313438686",
+          "applicationDate":"2017-4-20",
+          "state":"开通"
+        }, 
+
+        {
+          
+           "name": "thg",
+           "phoneNumber": "15242755275",
+
+           "id":1,
+           "account":"ucan2",
+           "userQQ":"313438686",
+           "applicationDate":"2017-4-22",
+           "state":"开通"
+        }, 
+        {
+          
+          "name": "thg",
+          "phoneNumber": "15242755275",
+           "id":2,
+           "account":"ucan3",
+           "userQQ":"313438686",
+           "applicationDate":"2017-4-19",
+            "state":"开通"
+        }, 
+        {
+         
+          "name": "thg",
+          "phoneNumber": "15242755275",
+           "id":3,
+           "account":"ucan4",
+           "userQQ":"313438686",
+           "applicationDate":"2017-4-18",
+            "state":"开通"
+        },
+        {
+         
+          "name": "thg",
+          "phoneNumber": "15242755275",
+           "id":4,
+           "account":"ucan5",
+           "userQQ":"313438686",
+           "applicationDate":"2017-4-18",
+            "state":"开通"
+        },
+        {
+         
+          "name": "thg",
+          "phoneNumber": "15242755275",
+           "id":6,
+           "account":"ucan6",
+           "userQQ":"313438686",
+           "applicationDate":"2017-4-18",
+            "state":"开通"
+        },
+        {
+         
+          "name": "thg",
+          "phoneNumber": "15242755275",
+           "id":7,
+           "account":"ucan7",
+           "userQQ":"313438686",
+           "applicationDate":"2017-4-18",
+            "state":"开通"
+        },
+        {
+         
+          "name": "thg",
+          "phoneNumber": "15242755275",
+           "id":8,
+           "account":"ucan8",
+           "userQQ":"313438686",
+           "applicationDate":"2017-4-18",
+            "state":"开通"
+        },
+        {
+         
+          "name": "thg",
+          "phoneNumber": "15242755275",
+           "id":9,
+           "account":"ucan9",
+           "userQQ":"313438686",
+           "applicationDate":"2017-4-18",
+            "state":"开通"
+        },
+        {
+         
+          "name": "thg",
+          "phoneNumber": "15242755275",
+           "id":10,
+           "account":"ucan10",
+           "userQQ":"313438686",
+           "applicationDate":"2017-4-18",
+            "state":"开通"
+        },
+        {
+         
+          "name": "我11",
+          "phoneNumber": "15242755275",
+           "id":11,
+           "account":"ucan11",
+           "userQQ":"313438686",
+           "applicationDate":"2017-4-18",
+            "state":"开通"
+        }
+         
+        ],
+
+    "total":50
+
+  } 
+    
+
+}
+
+
+
+       

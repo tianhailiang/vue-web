@@ -1,0 +1,61 @@
+
+{
+  "code": 0,
+  "message": "用户登录成功。",
+  
+  "data":{
+   
+   "kindergartenList":[
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p1.jpg","schoolName":"幼儿园名称0","schoolId":"0"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p2.jpg","schoolName":"幼儿园名称1","schoolId":"1"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p3.jpg","schoolName":"幼儿园名称2","schoolId":"2"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p4.jpg","schoolName":"幼儿园名称3","schoolId":"3"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p1.jpg","schoolName":"幼儿园名称4","schoolId":"4"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p2.jpg","schoolName":"幼儿园名称5","schoolId":"5"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p3.jpg","schoolName":"幼儿园名称6","schoolId":"6"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p4.jpg","schoolName":"幼儿园名称7","schoolId":"7"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p1.jpg","schoolName":"幼儿园thg0","schoolId":"0"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p2.jpg","schoolName":"幼儿园thg1","schoolId":"1"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p3.jpg","schoolName":"幼儿园thg2","schoolId":"2"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p4.jpg","schoolName":"幼儿园thg3","schoolId":"3"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p1.jpg","schoolName":"幼儿园thg4","schoolId":"4"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p2.jpg","schoolName":"幼儿园thg5","schoolId":"5"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p3.jpg","schoolName":"幼儿园thg6","schoolId":"6"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p4.jpg","schoolName":"幼儿园thg7","schoolId":"7"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p1.jpg","schoolName":"幼儿园haschoolIdao0","schoolId":"0"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p2.jpg","schoolName":"幼儿园haschoolIdao1","schoolId":"1"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p3.jpg","schoolName":"幼儿园haschoolIdao2","schoolId":"2"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p4.jpg","schoolName":"幼儿园haschoolIdao3","schoolId":"3"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p1.jpg","schoolName":"幼儿园haschoolIdao4","schoolId":"4"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p2.jpg","schoolName":"幼儿园haschoolIdao5","schoolId":"5"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p3.jpg","schoolName":"幼儿园haschoolIdao6","schoolId":"6"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p4.jpg","schoolName":"幼儿园haschoolIdao7","schoolId":"7"}
+
+
+   ],
+    "primarySchoolList":[
+        
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p1.jpg","schoolName":"小学名称0","schoolId":"0"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p2.jpg","schoolName":"小学名称1","schoolId":"1"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p3.jpg","schoolName":"小学名称2","schoolId":"2"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p4.jpg","schoolName":"小学名称3","schoolId":"3"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p1.jpg","schoolName":"小学名称4","schoolId":"4"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p2.jpg","schoolName":"小学名称5","schoolId":"5"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p3.jpg","schoolName":"小学名称6","schoolId":"6"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p4.jpg","schoolName":"小学名称7","schoolId":"7"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p1.jpg","schoolName":"小学thg0","schoolId":"0"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p2.jpg","schoolName":"小学thg1","schoolId":"1"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p3.jpg","schoolName":"小学thg2","schoolId":"2"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p4.jpg","schoolName":"小学thg3","schoolId":"3"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p1.jpg","schoolName":"小学thg4","schoolId":"4"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p2.jpg","schoolName":"小学thg5","schoolId":"5"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p3.jpg","schoolName":"小学thg6","schoolId":"6"},
+       {"schoolPicture":"http://localhost:8888/static/mockImg/banner/p4.jpg","schoolName":"小学thg7","schoolId":"7"}
+
+
+
+   ]
+
+  } 
+  
+}

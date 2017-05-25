@@ -68,7 +68,7 @@
 	display: inline-block;
 	width:23px;
 	height:23px;
-	background:url(http://localhost:8888/src/assets/boutique_course/money.png) no-repeat 0 0;
+	background:url(../../../assets/boutique_course/money.png) no-repeat 0 0;
 	background-size:cover;
 	margin-left: 5px;
 }
@@ -124,19 +124,19 @@
 }
 
 .authentication_ul li:nth-of-type(1){
-	background:url(http://localhost:8888/src/assets/boutique_course/realname.png) no-repeat 0 0;
+	background:url(../../../assets/boutique_course/realname.png) no-repeat 0 0;
 	background-size: 94px 20px;
 	color:#ffb76d;
 }
 
 .authentication_ul li:nth-of-type(2){
-	background:url(http://localhost:8888/src/assets/boutique_course/qualifications.png) no-repeat 0 0;
+	background:url(../../../assets/boutique_course/qualifications.png) no-repeat 0 0;
 	background-size: 94px 20px;
 	color:#ec6876;
 }
 
 .authentication_ul li:nth-of-type(3){
-	background:url(http://localhost:8888/src/assets/boutique_course/signup.png) no-repeat 0 0;
+	background:url(../../../assets/boutique_course/signup.png) no-repeat 0 0;
 	background-size: 94px 20px;
 	color:#92c626;
 }

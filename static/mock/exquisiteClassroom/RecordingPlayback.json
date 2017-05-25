@@ -4,7 +4,7 @@
   "message": "用户登录成功",
   "data":{
 
-  	"teacherPhoto":"http://localhost:8888/src/assets/banner/p1.jpg",
+  	"teacherPhoto":"http://localhost:8888/static/mockImg/banner/p1.jpg",
   	"teacherName":"赵老师",
   	"courseList":[
 

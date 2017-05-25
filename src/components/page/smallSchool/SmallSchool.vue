@@ -94,11 +94,11 @@
                <ul class="school_ul">
                  
                 
-                   <router-link   tag="li" v-for="(item,index) in kindRows" :key="index" :to="{name:'schoolDetail',params: { id:item.id }}">
+                   <router-link   tag="li" v-for="(item,index) in kindRows" :key="index" :to="{name:'schoolDetail',params: { id:item.schoolId}}">
                        <figure>
-                          <img :src="item.schoolUrl" />
+                          <img :src="item.schoolPicture" />
                            
-                           <figcaption>{{item.name}}</figcaption> 
+                           <figcaption>{{item.schoolName}}</figcaption> 
                        </figure>
 
                    </router-link>  
@@ -123,11 +123,11 @@
                <ul class="school_ul">
                  
                 
-                   <router-link   tag="li" v-for="(item,index) in primaryRows" :key="index" :to="{name:'schoolDetail',params: { id: item.id }}">
+                   <router-link   tag="li" v-for="(item,index) in primaryRows" :key="index" :to="{name:'schoolDetail',params: { id: item.schoolId}}">
                        <figure>
-                          <img :src="item.schoolUrl" />
+                          <img :src="item.schoolPicture" />
                            
-                           <figcaption>{{item.name}}</figcaption> 
+                           <figcaption>{{item.schoolName}}</figcaption> 
                        </figure>
 
                    </router-link>  
@@ -197,6 +197,7 @@ export default {
          //http://localhost:8888/static/mock/school/schoolList.json 
 
          // 调试的 http://192.168.1.81:8080/ucan_manage/schools/returnSchoolsAll
+        
          axios.get("http://localhost:8888/static/mock/school/schoolList.json",{
                
              })
@@ -215,7 +216,7 @@ export default {
                   this.$set(this,"kmaxPage",Math.ceil(this.kindergartenList.length/this.size));
                   // console.log(this.kmaxPage)
 
-                  this.$set(this,'primarySchool',result.data.primarySchool);
+                  this.$set(this,'primarySchool',result.data.primarySchoolList);
                   this.$set(this,'primaryRows',this.primarySchool.slice(0,this.size));
                   this.$set(this,"pmaxPage",Math.ceil(this.primarySchool.length/this.size));
                   

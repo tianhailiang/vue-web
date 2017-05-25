@@ -1,0 +1,102 @@
+{
+  "code": 0,
+  "message": "用户登录成功。",
+  
+  "data":{
+     
+     "schoolLogoPicture":"http://localhost:8888/static/mockImg/banner/p1.jpg",
+     "schoolName":"贵州小学101",
+     "schoolPicture":[
+
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p1.jpg"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p2.jpg"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p3.jpg"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p4.jpg"}
+     ],
+
+     "briefIntroduction":"<p style='line-height:40px'>学校简介学校简介学校简介学校简介学校简介学校简介学校简介学校简介学校简介学校简介学校简介学校简介学校简介学校简介学校简介学校简介学校简介学校简介学校简介学校简介学校简介学校简介学校简介学校简介学校简</p>",
+     
+     "TeachingEnvironment":[
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p1.jpg","name":"教学名称0"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p2.jpg","name":"教学名称1"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p3.jpg","name":"教学名称2"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p4.jpg","name":"教学名称3"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p1.jpg","name":"教学thg0"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p2.jpg","name":"教学thg1"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p3.jpg","name":"教学thg2"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p4.jpg","name":"教学thg3"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p1.jpg","name":"教学haidao0"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p2.jpg","name":"教学haidao1"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p3.jpg","name":"教学haidao2"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p4.jpg","name":"教学haidao3"}
+
+     ],
+
+     "CourseIntroduction":[
+         
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p1.jpg","name":"课程介绍名称0"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p2.jpg","name":"课程介绍名称1"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p3.jpg","name":"课程介绍名称2"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p4.jpg","name":"课程介绍名称3"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p1.jpg","name":"课程thg名称0"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p2.jpg","name":"课程thg名称1"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p3.jpg","name":"课程thg名称2"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p4.jpg","name":"课程thg名称3"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p1.jpg","name":"课程haidao名称0"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p2.jpg","name":"课程haidao名称1"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p3.jpg","name":"课程haidao名称2"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p4.jpg","name":"课程haidao名称3"}
+
+
+     ],
+
+    "BabyRecipes":[
+         
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p1.jpg","name":"宝贝食谱名称0"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p2.jpg","name":"宝贝食谱名称1"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p3.jpg","name":"宝贝食谱名称2"},
+       {"schoolUrl":"http://localhost:8888/static/mockImg/banner/p4.jpg","name":"宝贝食谱名称"}
+
+    ],
+
+    "CampusDynamics":[
+
+    	{"news":"学校课园朗诵大会","date":"2017年4月28日","id":"0"},
+    	{"news":"学校课园朗诵大会","date":"2017年4月28日","id":"1"},
+    	{"news":"学校课园朗诵大会","date":"2017年4月28日","id":"2"},
+    	{"news":"学校课园朗诵大会","date":"2017年4月28日","id":"3"},
+    	{"news":"学校课园朗诵大会","date":"2017年4月28日","id":"4"},
+    	{"news":"学校课园朗诵大会","date":"2017年4月28日","id":"5"},
+    	{"news":"学校课园朗诵大会","date":"2017年4月28日","id":"6"},
+    	{"news":"学校课园朗诵大会","date":"2017年4月28日","id":"7"}
+
+    ],
+
+    "Notice":[
+
+      {"news":"本周端午节放假3天","date":"2017年5月30日","id":"0"},
+      {"news":"本周端午节放假3天","date":"2017年5月30日","id":"1"},
+      {"news":"本周端午节放假3天","date":"2017年5月30日","id":"2"},
+      {"news":"本周端午节放假3天","date":"2017年5月30日","id":"3"},
+      {"news":"本周端午节放假3天","date":"2017年5月30日","id":"4"},
+      {"news":"本周端午节放假3天","date":"2017年5月30日","id":"5"},
+      {"news":"本周端午节放假3天","date":"2017年5月30日","id":"6"},
+      {"news":"本周端午节放假3天","date":"2017年5月30日","id":"7"}
+
+    ],
+
+    "educationalInformation":[
+
+       {"news":"李克强总理：切实","date":"2017年5月30日","id":"0"},
+       {"news":"李克强总理：切实","date":"2017年5月30日","id":"1"},
+       {"news":"李克强总理：切实","date":"2017年5月30日","id":"2"},
+       {"news":"李克强总理：切实","date":"2017年5月30日","id":"3"},
+       {"news":"李克强总理：切实","date":"2017年5月30日","id":"4"},
+       {"news":"李克强总理：切实","date":"2017年5月30日","id":"5"},
+       {"news":"李克强总理：切实","date":"2017年5月30日","id":"6"},
+       {"news":"李克强总理：切实","date":"2017年5月30日","id":"7"}
+    ]
+
+  }
+
+}

@@ -1,0 +1,43 @@
+{
+  "code": 0,
+  "message": "用户登录成功。",
+  "data":[
+
+    {
+      "Province":"贵州",
+      "cityList":[
+      	{
+          "cityName":"贵阳",
+          "cityId":"001"
+        },
+        {
+          "cityName":"遵义",
+          "cityId":"002"
+        },
+        {
+          "cityName":"贵南",
+          "cityId":"002"
+        }
+     ]
+    },
+
+    {
+      "Province":"四川",
+      "cityList":[
+      	{
+          "cityName":"成都",
+          "cityId":"001"
+        },
+        {
+          "cityName":"达州",
+          "cityId":"002"
+        },
+        {
+          "cityName":"成阳",
+          "cityId":"002"
+        }
+      ]
+    }
+  ]
+
+ } 

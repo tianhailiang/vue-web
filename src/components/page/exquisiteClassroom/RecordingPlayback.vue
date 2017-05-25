@@ -172,7 +172,7 @@
   <div>
   	
   	  <div class="recording_top">
-  	       <img src="http://localhost:8888/src/assets/header/ucan_logo1.png" class="recording_img">
+  	       <img src="../../../assets/header/ucan_logo1.png" class="recording_img">
 
   	  </div>
 

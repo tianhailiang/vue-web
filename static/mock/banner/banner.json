@@ -5,10 +5,10 @@
   "data":{
    
    "banner":[
-       {"bannerUrl":"http://localhost:8888/src/assets/banner/p1.jpg"},
-       {"bannerUrl":"http://localhost:8888/src/assets/banner/p2.jpg"},
-       {"bannerUrl":"http://localhost:8888/src/assets/banner/p3.jpg"},
-       {"bannerUrl":"http://localhost:8888/src/assets/banner/p4.jpg"}
+       {"bannerUrl":"http://localhost:8888/static/mockImg/banner/p1.jpg"},
+       {"bannerUrl":"http://localhost:8888/static/mockImg/banner/p2.jpg"},
+       {"bannerUrl":"http://localhost:8888/static/mockImg/banner/p3.jpg"},
+       {"bannerUrl":"http://localhost:8888/static/mockImg/banner/p4.jpg"}
 
    ]
 

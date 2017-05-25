@@ -1,0 +1,95 @@
+{
+
+  "code": 0,
+  "message": "用户登录成功",
+  "data":{
+
+  	 "curriculumImg":"http://localhost:8888/static/mockImg/course.jpg",
+  	 "curriculumTitle":"课程标题课程标题",
+  	 "curriculumPrice":"500",
+  	 "collect":0,
+  	 "chapterNumber":"3",
+  	 "playbackTimes":"1234",
+     "courseContent":"课程内容课程内容课程内容课程内容课程内容课程内容",
+     "openTime":"开课时间：每周一、三、五晚上8：00——9：00",
+     "matter":"注意事项注意事项",
+
+  	 "curriculumEvaluation":[
+        {
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
+          "teacherScore":"2",
+          "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
+          "evaluateTime":"2017-1-17 15:30"
+        },
+         {
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
+          "teacherScore":"3",
+          "studentContent":"3学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
+          "evaluateTime":"2017-1-17 15:30"
+        },
+         {
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
+          "teacherScore":"2",
+          "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
+          "evaluateTime":"2017-1-17 15:30"
+        },
+         {
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
+          "teacherScore":"0",
+          "studentContent":"0学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
+          "evaluateTime":"2017-1-17 15:30"
+        },
+         {
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
+          "teacherScore":"4",
+          "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
+          "evaluateTime":"2017-1-17 15:30"
+        },
+         {
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
+          "teacherScore":"4",
+          "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
+          "evaluateTime":"2017-1-17 15:30"
+        },
+         {
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
+          "teacherScore":"4",
+          "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
+          "evaluateTime":"2017-1-17 15:30"
+        },
+         {
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
+          "teacherScore":"4",
+          "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
+          "evaluateTime":"2017-1-17 15:30"
+        },
+         {
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
+          "teacherScore":"4",
+          "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
+          "evaluateTime":"2017-1-17 15:30"
+        },
+         {
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
+          "teacherScore":"4",
+          "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
+          "evaluateTime":"2017-1-17 15:30"
+        },
+         {
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
+          "teacherScore":"4",
+          "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
+          "evaluateTime":"2017-1-17 15:30"
+        },
+         {
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
+          "teacherScore":"4",
+          "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
+          "evaluateTime":"2017-1-17 15:30"
+        }
+
+  	 ]
+
+  }
+
+ } 

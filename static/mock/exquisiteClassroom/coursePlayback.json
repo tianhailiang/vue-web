@@ -4,7 +4,7 @@
   "message": "用户登录成功",
   "data":{
 
-  	 "curriculumImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+  	 "curriculumImg":"http://localhost:8888/static/mockImg/course.jpg",
   	 "curriculumTitle":"课程标题课程标题",
   	 "curriculumPrice":"500",
   	 "collect":0,
@@ -16,73 +16,73 @@
 
   	 "curriculumEvaluation":[
         {
-          "userImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
           "teacherScore":"2",
           "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
           "evaluateTime":"2017-1-17 15:30"
         },
          {
-          "userImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
           "teacherScore":"3",
           "studentContent":"3学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
           "evaluateTime":"2017-1-17 15:30"
         },
          {
-          "userImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
           "teacherScore":"2",
           "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
           "evaluateTime":"2017-1-17 15:30"
         },
          {
-          "userImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
           "teacherScore":"0",
           "studentContent":"0学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
           "evaluateTime":"2017-1-17 15:30"
         },
          {
-          "userImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
           "teacherScore":"4",
           "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
           "evaluateTime":"2017-1-17 15:30"
         },
          {
-          "userImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
           "teacherScore":"4",
           "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
           "evaluateTime":"2017-1-17 15:30"
         },
          {
-          "userImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
           "teacherScore":"4",
           "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
           "evaluateTime":"2017-1-17 15:30"
         },
          {
-          "userImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
           "teacherScore":"4",
           "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
           "evaluateTime":"2017-1-17 15:30"
         },
          {
-          "userImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
           "teacherScore":"4",
           "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
           "evaluateTime":"2017-1-17 15:30"
         },
          {
-          "userImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
           "teacherScore":"4",
           "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
           "evaluateTime":"2017-1-17 15:30"
         },
          {
-          "userImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
           "teacherScore":"4",
           "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
           "evaluateTime":"2017-1-17 15:30"
         },
          {
-          "userImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+          "userImg":"http://localhost:8888/static/mockImg/course.jpg",
           "teacherScore":"4",
           "studentContent":"学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价学生评价",
           "evaluateTime":"2017-1-17 15:30"

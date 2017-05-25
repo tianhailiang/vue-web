@@ -41,7 +41,7 @@ nav{
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
-    background: url(http://localhost:8888/src/assets/header/search-arrow.png) no-repeat scroll right center transparent;
+    background: url(../../assets/header/search-arrow.png) no-repeat scroll right center transparent;
     padding-right: 14px;
     font-family: "Microsoft YaHei";
 }
@@ -58,7 +58,7 @@ nav{
 .b{
     display: block;
     position: absolute;
-    background: url(http://localhost:8888/src/assets/header/top.png) no-repeat 2px 5px;
+    background: url(../../assets/header/top.png) no-repeat 2px 5px;
     width: 24px;
     height: 24px;
     border: none;
@@ -158,7 +158,7 @@ nav{
 }
 
 .user_notice_btn{
-   background: url(http://localhost:8888/src/assets/header/letter.png) no-repeat 50% 50%;
+   background: url(../../assets/header/letter.png) no-repeat 50% 50%;
     background-size: 23px 23px;
     width:34px;
     height:32px;
@@ -175,7 +175,7 @@ nav{
 
 
 .ico_profile{
-    background: url(http://localhost:8888/src/assets/header/profile.png) no-repeat 50% 50%;
+    background: url(../../assets/header/profile.png) no-repeat 50% 50%;
     background-size: 20px 20px;
     display: block;
     width: 34px;
@@ -264,22 +264,22 @@ nav{
 }
 
 .ico_home {
-    background: url(http://localhost:8888/src/assets/header/room.png);
+    background: url(../../assets/header/room.png);
     background-size: cover;
 }
 
 .ico_class_m {
-    background: url(http://localhost:8888/src/assets/header/class-manage.png);
+    background: url(../../assets/header/class-manage.png);
     background-size: cover;
 }
 
 .ico_setup {
-    background: url(http://localhost:8888/src/assets/header/setup.png);
+    background: url(../../assets/header/setup.png);
     background-size: cover;
 }
 
 .ico_go_away {
-    background: url(http://localhost:8888/src/assets/header/go-away.png);
+    background: url(../../assets/header/go-away.png);
     background-size: cover;
 }
 
@@ -294,7 +294,7 @@ nav{
      
      <div class="logo">
 
-          <img src="http://localhost:8888/src/assets/header/logo.png" >
+          <img src="../../assets/header/logo.png" >
 
      </div> 
 
@@ -305,7 +305,7 @@ nav{
               <div class="lgo_user" v-if="role!=''">
                 
                   <div class="header_photo" >
-                     <img src="http://localhost:8888/src/assets/header/body-header.png" />
+                     <img src="../../assets/header/body-header.png" />
                   </div>
 
                   <div class="user-box">

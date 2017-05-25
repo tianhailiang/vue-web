@@ -6,56 +6,56 @@
 
       "EnglishCourse":[
             {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"课程标题课程标题",
             "courseTeacher":"李芸",
             "courseMoney":"666.00",
             "courseId":"120"
            },
            {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"课程标题课程标题",
             "courseTeacher":"李芸",
             "courseMoney":"666.00",
             "courseId":"120"
            },
            {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"课程标题课程标题",
             "courseTeacher":"李芸",
             "courseMoney":"666.00",
             "courseId":"120"
            },
            {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"课程标题课程标题",
             "courseTeacher":"李芸",
             "courseMoney":"666.00",
             "courseId":"120"
            },
            {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"课程标题课程标题",
             "courseTeacher":"thg",
             "courseMoney":"123.00",
             "courseId":"120"
            },
             {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"课程标题课程标题",
             "courseTeacher":"thg",
             "courseMoney":"123.00",
             "courseId":"120"
            },
             {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"课程标题课程标题",
             "courseTeacher":"thg",
             "courseMoney":"123.00",
             "courseId":"120"
            },
             {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"课程标题课程标题",
             "courseTeacher":"thg",
             "courseMoney":"123.00",
@@ -68,56 +68,56 @@
     "ChineseCourse":[
        
           {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"语文课程标题语文课程标题",
             "courseTeacher":"李芸",
             "courseMoney":"666.00",
             "courseId":"120"
            },
            {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"语文课程标题语文课程标题",
             "courseTeacher":"李芸",
             "courseMoney":"666.00",
             "courseId":"120"
            },
            {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"语文课程标题语文课程标题",
             "courseTeacher":"李芸",
             "courseMoney":"666.00",
             "courseId":"120"
            },
            {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"语文课程标题语文课程标题",
             "courseTeacher":"李芸",
             "courseMoney":"666.00",
             "courseId":"120"
            },
            {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"语文课程标题语文课程标题",
             "courseTeacher":"thg",
             "courseMoney":"123.00",
             "courseId":"120"
            },
             {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"语文课程标题语文课程标题",
             "courseTeacher":"thg",
             "courseMoney":"123.00",
             "courseId":"120"
            },
             {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"语文课程标题语文课程标题",
             "courseTeacher":"thg",
             "courseMoney":"123.00",
             "courseId":"120"
            },
             {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"语文课程标题语文课程标题",
             "courseTeacher":"thg",
             "courseMoney":"123.00",
@@ -129,56 +129,56 @@
     "MathCourse":[
        
        {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"数学课程标题数学课程标题",
             "courseTeacher":"李芸",
             "courseMoney":"666.00",
             "courseId":"120"
            },
            {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"数学课程标题数学课程标题",
             "courseTeacher":"李芸",
             "courseMoney":"666.00",
             "courseId":"120"
            },
            {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"数学课程标题数学课程标题",
             "courseTeacher":"李芸",
             "courseMoney":"666.00",
             "courseId":"120"
            },
            {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"数学课程标题数学课程标题",
             "courseTeacher":"李芸",
             "courseMoney":"666.00",
             "courseId":"120"
            },
            {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"数学课程标题数学课程标题",
             "courseTeacher":"thg",
             "courseMoney":"123.00",
             "courseId":"120"
            },
             {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"数学课程标题数学课程标题",
             "courseTeacher":"thg",
             "courseMoney":"123.00",
             "courseId":"120"
            },
             {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"数学课程标题数学课程标题",
             "courseTeacher":"thg",
             "courseMoney":"123.00",
             "courseId":"120"
            },
             {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"数学课程标题数学课程标题",
             "courseTeacher":"thg",
             "courseMoney":"123.00",
@@ -189,56 +189,56 @@
     "OtherCourse":[
        
          {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"其它课程标题其它课程标题",
             "courseTeacher":"李芸",
             "courseMoney":"666.00",
             "courseId":"120"
            },
            {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"其它课程标题其它课程标题",
             "courseTeacher":"李芸",
             "courseMoney":"666.00",
             "courseId":"120"
            },
            {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"其它课程标题其它课程标题",
             "courseTeacher":"李芸",
             "courseMoney":"666.00",
             "courseId":"120"
            },
            {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"其它课程标题其它课程标题",
             "courseTeacher":"李芸",
             "courseMoney":"666.00",
             "courseId":"120"
            },
            {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"其它课程标题其它课程标题",
             "courseTeacher":"thg",
             "courseMoney":"123.00",
             "courseId":"120"
            },
             {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"其它课程标题其它课程标题",
             "courseTeacher":"thg",
             "courseMoney":"123.00",
             "courseId":"120"
            },
             {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"其它课程标题其它课程标题",
             "courseTeacher":"thg",
             "courseMoney":"123.00",
             "courseId":"120"
            },
             {
-            "courseImg":"http://localhost:8888/src/assets/boutique_course/course.jpg",
+            "courseImg":"http://localhost:8888/static/mockImg/course.jpg",
             "courseTitle":"其它课程标题其它课程标题",
             "courseTeacher":"thg",
             "courseMoney":"123.00",

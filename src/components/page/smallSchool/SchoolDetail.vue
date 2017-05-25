@@ -442,6 +442,10 @@ export default {
 
   	// console.log(this.$route.params)
 
+    //http://localhost:8888/static/mock/school/schoolDetail.json
+
+    //调试http://192.168.3.118:8080/ucan_manage/weiSchool/returnSchoolDetails
+
   	axios.get("http://localhost:8888/static/mock/school/schoolDetail.json",{
 
   		      params:{
@@ -460,9 +464,9 @@ export default {
 
                    console.log(result)
 
-                   this.$set(this,'schoolImg',result.data.topImg);
+                   this.$set(this,'schoolImg',result.data.schoolLogoPicture);
                    this.$set(this,"schoolName",result.data.schoolName);
-                   this.$set(this,"schoolBannerList",result.data.schoolBanner);
+                   this.$set(this,"schoolBannerList",result.data.schoolPicture);
                    this.$set(this,'briefIntroduction',result.data.briefIntroduction);
                    //教学环境列表
                   this.$set(this,'teachingEnvList',result.data.TeachingEnvironment);
